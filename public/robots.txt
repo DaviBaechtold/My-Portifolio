@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://avilashbharti.in/sitemap.xml 
+Sitemap: https://davicampos.dev/sitemap.xml 

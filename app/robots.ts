@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/private/', '/admin/'],
     },
-    sitemap: 'https://avilashbharti.in/sitemap.xml',
-    host: 'https://avilashbharti.in',
+  sitemap: 'https://davicampos.dev/sitemap.xml',
+  host: 'https://davicampos.dev',
   }
 }

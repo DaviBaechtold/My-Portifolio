@@ -2,18 +2,17 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://avilashbharti.in'),
+  metadataBase: new URL('https://davicampos.dev'),
   title: {
-    default: 'Avilash Bharti | Software Engineer & .NET Developer Portfolio',
-    template: '%s | Avilash Bharti'
+    default: 'Davi Campos | Computer Engineer Portfolio',
+    template: '%s | Davi Campos'
   },
-  description: 'Experienced Software Engineer and .NET Developer specializing in full-stack web development, C#, ASP.NET, React, and modern web technologies. View my projects, skills, and professional experience.',
+  description: 'Experienced Computer Engineer specializing in full-stack web development, C#, ASP.NET, React, and modern web technologies. View my projects, skills, and professional experience.',
   keywords: [
-    'Avilash Bharti',
-    'Software Engineer',
-    '.NET Developer',
+    'Davi Campos',
+    'Computer Engineer',
     'Full Stack Developer',
-    'C# Developer',
+    'Python Developer',
     'ASP.NET Developer',
     'React Developer',
     'Web Development',
@@ -25,9 +24,9 @@ export const metadata: Metadata = {
     'Database Design',
     'Microsoft Technologies'
   ],
-  authors: [{ name: 'Avilash Bharti', url: 'https://avilashbharti.in' }],
-  creator: 'Avilash Bharti',
-  publisher: 'Avilash Bharti',
+  authors: [{ name: 'Davi Campos', url: 'https://davicampos.dev' }],
+  creator: 'Davi Campos',
+  publisher: 'Davi Campos',
   formatDetection: {
     email: false,
     address: false,
@@ -47,101 +46,101 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://avilashbharti.in',
-    title: 'Avilash Bharti | Full Stack Software Engineer',
-    description: 'Experienced Software Engineer and .NET Developer specializing in full-stack web development. Explore my projects, technical skills, and professional journey.',
-    siteName: 'Avilash Bharti Portfolio',
+    url: 'https://davicampos.dev',
+    title: 'Davi Campos | Full Stack Computer Engineer',
+    description: 'Experienced Computer Engineer specializing in full-stack web development. Explore my projects, technical skills, and professional journey.',
+    siteName: 'Davi Campos Portfolio',
     images: [
       {
-        url: '/images/avilash-share.jpg', // You'll need to create this image
+        url: '/images/davi-share.jpg', // You'll need to create this image
         width: 1200,
         height: 630,
-        alt: 'Avilash Bharti - Software Engineer Portfolio',
+        alt: 'Davi Campos - Computer Engineer Portfolio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Avilash Bharti | Full Stack Software Engineer',
-    description: 'Experienced Software Engineer and .NET Developer specializing in full-stack web development. View my portfolio and projects.',
-    images: ['/images/avilash-share.jpg'],
-    creator: '@AviCorpse',
-    site: '@AviCorpse',
+    title: 'Davi Campos | Full Stack Computer Engineer',
+    description: 'Experienced Computer Engineer specializing in full-stack web development. View my portfolio and projects.',
+    images: ['/images/davi-share.jpg'],
+    creator: '@DaviCampos',
+    site: '@DaviCampos',
   },
   // Additional social media and platform metadata
   other: {
     // LinkedIn
-    'linkedin:owner': 'avilashbharti',
-    'linkedin:title': 'Avilash Bharti | Full Stack Software Engineer',
-    'linkedin:description': 'Experienced Software Engineer and .NET Developer specializing in full-stack web development. Connect with me on LinkedIn.',
-    'linkedin:image': '/images/avilash-share.jpg',
+    'linkedin:owner': 'davicampos',
+    'linkedin:title': 'Davi Campos | Full Stack Computer Engineer',
+    'linkedin:description': 'Experienced Computer Engineer specializing in full-stack web development. Connect with me on LinkedIn.',
+    'linkedin:image': '/images/davi-share.jpg',
 
     // Instagram
-    'instagram:title': 'Avilash Bharti | Software Engineer',
-    'instagram:description': 'Follow my journey as a Software Engineer and .NET Developer. Behind-the-scenes of coding life.',
-    'instagram:image': '/images/avilash-share.jpg',
-    'instagram:creator': '@avilash_bharti',
+    'instagram:title': 'Davi Campos | Computer Engineer',
+    'instagram:description': 'Follow my journey as a Computer Engineer. Behind-the-scenes of coding life.',
+    'instagram:image': '/images/davi-share.jpg',
+    'instagram:creator': '@DaviCampos',
 
     // Facebook
-    'facebook:title': 'Avilash Bharti | Full Stack Software Engineer Portfolio',
-    'facebook:description': 'Experienced Software Engineer and .NET Developer. Explore my projects and professional journey.',
-    'facebook:image': '/images/avilash-share.jpg',
+    'facebook:title': 'Davi Campos | Full Stack Computer Engineer Portfolio',
+    'facebook:description': 'Experienced Computer Engineer specializing in full-stack web development. Explore my projects and professional journey.',
+    'facebook:image': '/images/davi-share.jpg',
     'facebook:type': 'website',
-    'facebook:url': 'https://avilashbharti.in',
+    'facebook:url': 'https://davicampos.dev',
 
     // Discord (for tech communities)
-    'discord:title': 'Avilash Bharti | Software Engineer',
+    'discord:title': 'Davi Campos | Computer Engineer',
     'discord:description': 'Full Stack Developer specializing in .NET and React. Available for tech discussions and collaborations.',
-    'discord:image': '/images/avilash-share.jpg',
+    'discord:image': '/images/davi-share.jpg',
 
     // Microsoft/GitHub specific
-    'github:user': 'avilash-b',
-    'github:title': 'Avilash Bharti - Software Engineer',
+    'github:user': 'davi-campos',
+    'github:title': 'Davi Campos - Computer Engineer',
     'github:description': 'Check out my open source projects and contributions on GitHub.',
 
     // Professional platforms
-    // 'stackoverflow:user': 'avilash-bharti', // Replace with actual Stack Overflow profile
-    // 'dev.to:username': 'avilashbharti', // Replace with actual Dev.to username if you have one
+    // 'stackoverflow:user': 'davi-campos', // Replace with actual Stack Overflow profile
+    // 'dev.to:username': 'davi-campos', // Replace with actual Dev.to username if you have one
 
     // WhatsApp sharing
-    'whatsapp:title': 'Avilash Bharti | Software Engineer Portfolio',
-    'whatsapp:description': 'Check out this amazing portfolio of a Full Stack Software Engineer!',
+    'whatsapp:title': 'Davi Campos | Computer Engineer Portfolio',
+    'whatsapp:description': 'Check out this amazing portfolio of a Full Stack Computer Engineer!',
 
     // Telegram sharing
-    'telegram:title': 'Avilash Bharti | Software Engineer',
+    'telegram:title': 'Davi Campos | Computer Engineer',
     'telegram:description': 'Portfolio of an experienced .NET and React developer.',
-    'telegram:image': '/images/avilash-share.jpg',
+    'telegram:image': '/images/davi-share.jpg',
 
     // Pinterest
-    'pinterest:title': 'Avilash Bharti | Software Engineer Portfolio',
+    'pinterest:title': 'Davi Campos | Computer Engineer Portfolio',
     'pinterest:description': 'Professional portfolio showcasing software development projects and skills.',
-    'pinterest:image': '/images/avilash-share.jpg',
+    'pinterest:image': '/images/davi-share.jpg',
 
     // Reddit
-    'reddit:title': 'Avilash Bharti | Full Stack Software Engineer',
-    'reddit:description': 'Portfolio of an experienced Software Engineer specializing in .NET and React development.',
+    'reddit:title': 'Davi Campos | Full Stack Computer Engineer',
+    'reddit:description': 'Portfolio of an experienced Computer Engineer specializing in .NET and React development.',
 
     // YouTube (if you have tech content)
-    // 'youtube:channel': 'avilashbharti', // Replace with actual YouTube channel if you have one
-    // 'youtube:title': 'Avilash Bharti | Software Engineer',
+    // 'youtube:channel': 'davi-campos', // Replace with actual YouTube channel if you have one
+    // 'youtube:title': 'Davi Campos | Computer Engineer',
     // 'youtube:description': 'Tech tutorials and software development insights.',
 
     // Skype
-    // 'skype:username': 'avilash.bharti', // Replace with actual Skype username
+    // 'skype:username': 'davi.campos', // Replace with actual Skype username
 
     // Medium (if you write articles)
-    // 'medium:username': '@avilashbharti', // Replace with actual Medium username if you have one
-    // 'medium:title': 'Avilash Bharti | Software Engineer',
+    // 'medium:username': '@davi-campos', // Replace with actual Medium username if you have one
+    // 'medium:title': 'Davi Campos | Computer Engineer',
     // 'medium:description': 'Read my articles about software development, .NET, and web technologies.',
 
     // General sharing metadata
-    'sharing:title': 'Avilash Bharti | Software Engineer Portfolio',
+    'sharing:title': 'Davi Campos | Computer Engineer Portfolio',
     'sharing:description': 'Experienced Full Stack Developer specializing in .NET and React. View projects and professional experience.',
-    'sharing:image': '/images/avilash-share.jpg',
-    'sharing:url': 'https://avilashbharti.in',
+    'sharing:image': '/images/davi-share.jpg',
+    'sharing:url': 'https://davicampos.dev',
   },
   alternates: {
-    canonical: 'https://avilashbharti.in',
+    canonical: 'https://davicampos.dev',
   },
   verification: {
     google: 'zdQFYxKVBv3AoLlMTfXFm3zBeftFUoFsqW9mZsvT3Xs', // Replace with your actual Google Search Console verification code
@@ -159,17 +158,17 @@ export default function RootLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Avilash Bharti",
-    "jobTitle": "Software Engineer",
-    "description": "Experienced Software Engineer and .NET Developer specializing in full-stack web development",
-    "url": "https://avilashbharti.in",
+    "name": "Davi Campos",
+    "jobTitle": "Computer Engineer",
+    "description": "Experienced Computer Engineer and .NET Developer specializing in full-stack web development",
+    "url": "https://davicampos.dev",
     "sameAs": [
-      "https://linkedin.com/in/avilashbharti",
-      "https://github.com/avilash-b",
-      "https://x.com/AviCorpse",
-      "https://www.instagram.com/avilash_bharti/",
-      "https://stackoverflow.com/users/13072887/avilash-bharti",
-      "https://www.facebook.com/avi.corpse",
+      "https://linkedin.com/in/davi-campos",
+      "https://github.com/davi-campos",
+      "https://x.com/DaviCampos",
+      "https://www.instagram.com/davi_campos/",
+      "https://stackoverflow.com/users/13072887/davi-campos",
+      "https://www.facebook.com/davi.campos",
     ],
     "knowsAbout": [
       "Software Engineering",
@@ -193,7 +192,7 @@ export default function RootLayout({
     },
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "IN"
+      "addressCountry": "BR"
     }
   }
 

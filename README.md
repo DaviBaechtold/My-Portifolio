@@ -1,4 +1,4 @@
-# Avilash Bharti Portfolio
+# Davi Campos Portfolio
 
 A modern, responsive portfolio website built with Next.js, TypeScript, and Material-UI.
 
@@ -24,7 +24,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Mater
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/avilash-b/avilash-portfolio.git
+   git clone https://github.com/DaviBaechtold/My-Portifolio.git
    cd avilash-portfolio
    ```
 
@@ -138,10 +138,9 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 📞 Contact
 
 - **Email:** avilash.bharti@outlook.com
-- **LinkedIn:** [linkedin.com/in/avilashbharti](https://linkedin.com/in/avilashbharti)
-- **GitHub:** [github.com/avilash-b](https://github.com/avilash-b)
-- **Website:** [avilashbharti.in](https://avilashbharti.in)
+- **LinkedIn:** [linkedin.com/in/davi-baechtold-campos](https://www.linkedin.com/in/davi-baechtold-campos-393037145/)
+- **GitHub:** [github.com/DaviBaechtold](https://github.com/DaviBaechtold)
+- **Website:** [davicampos.dev](https://davicampos.dev)
 
 ---
 
-Built with ❤️ by Avilash Bharti
