@@ -24,15 +24,15 @@ const Projects = () => {
       description: "Technical leadership of the robotics team, developing robots for national and international competitions. Focus on computer vision, embedded systems, and artificial intelligence.",
       image: "",
       technologies: ["C#", "ROS", "Python", "Soldering", "Embedded Systems", "Electronics", "Arduino", "PCB Design", "3D Modeling", "SolidWorks"],
-      githubLink: "https://u.easyeda.com/account/user/team/detail/projects?team=6467cf310dd24f4fa22898d0416397cf&type=allTeam",
-      liveLink: "https://www.instagram.com/equipepucpr/"
+      githubLink: "https://github.com/equipepucpr",
+      liveLink: "https://u.easyeda.com/account/user/team/detail/projects?team=6467cf310dd24f4fa22898d0416397cf&type=allTeam"
     },
     {
       title: "Portfolio",
       description: "A personal portfolio showcasing my projects and skills.",
       image: "",
-      technologies: ["Next.js", "TypeScript", "Node.js", ".NET 8", "C#", "Postgres", "Docker"],
-      githubLink: "",
+      technologies: ["Next.js", "TypeScript", "Node.js", "Postgres", "HTML", "CSS", "JavaScript", "MUI"],
+      githubLink: "https://github.com/DaviBaechtold/My-Portifolio",
       liveLink: ""
     },
     {
@@ -66,8 +66,23 @@ const Projects = () => {
       technologies: ["C++", "ESP32", "RFID", "FreeRTOS", "WiFi", "HTTP", "JSON", "SPIFFS"],
       githubLink: "https://github.com/equipepucpr/access-management",
       liveLink: ""
+    },
+    {
+      title: "Coffee Machine PCB - Freelance",
+      description: "Design and development of a PCB for a coffee machine, focusing on power management and control systems.",
+      image: "",
+      technologies: ["PCB Design", "Electronics", "Soldering"],
+      githubLink: "https://github.com/equipepucpr/access-management",
+      liveLink: "https://u.easyeda.com/account/user/team/detail/projects?team=ddf10f811b7a4fb2bbd262f51442600a&type=allTeam"
+    },
+    {
+      title: "Access Management ESP32 - Robotics Team",
+      description: "An access control system using an ESP32 and RFID. It authenticates users via RFID cards, manages credentials fetched from a server, logs access events, and provides real-time feedback with LEDs and a buzzer. The system features WiFi connectivity, NTP time synchronization, and uses FreeRTOS for concurrent tasks.",
+      image: "",
+      technologies: ["C++", "ESP32", "RFID", "FreeRTOS", "WiFi", "HTTP", "JSON", "SPIFFS"],
+      githubLink: "https://github.com/equipepucpr/access-management",
+      liveLink: ""
     }
-    
   ]
 
   const { ref, isVisible } = useScrollAnimation()
