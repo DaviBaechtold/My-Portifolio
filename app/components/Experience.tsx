@@ -7,35 +7,36 @@ import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Slide from "@mui/material/Slide";
 import WorkIcon from "@mui/icons-material/Work";
+import { useLanguage } from "./LanguageProvider";
 
 const experiences = [
   {
     company: "CELEPAR",
     url: "https://www.celepar.pr.gov.br/",
-    position: "IT Intern",
-    duration: "Sep 2025 - Present",
-    description: "Provided technical support, including OS (Windows/Linux) installation, hardware setup, and user assistance with applications, printers, and security software.",
+    positionKey: "experience.position.celepar",
+    durationKey: "experience.duration.celepar",
+    descriptionKey: "experience.desc.celepar",
   },
   {
     company: "Technische Hochschule Ingolstadt",
     url: "https://www.thi.de/",
-    position: "Research Assistant",
-    duration: "Sep 2024 - Aug 2025",
-    description: "Developed AutoVoice, a voice command system for autonomous vehicles, and the IMU Visualizer, a tool for inertial sensor data visualization.",
+    positionKey: "experience.position.thi",
+    durationKey: "experience.duration.thi",
+    descriptionKey: "experience.desc.thi",
   },
   {
     company: "BRF - S.A.",
     url: "https://www.brf-global.com/",
-    position: "Software Engineer Intern",
-    duration: "Feb 2023 - Sep 2024",
-    description: "Developed a product image analysis system using Azure ML and OpenAI for anomaly detection. Automated processes with Power Automate and created dashboards in Power BI.",
+    positionKey: "experience.position.brf",
+    durationKey: "experience.duration.brf",
+    descriptionKey: "experience.desc.brf",
   },
   {
     company: "PUCPR Robotics Team",
     url: "https://www.pucpr.br/",
-    position: "Autonomous Robots Team Manager",
-    duration: "Feb 2022 – Jul 2023",
-    description: "Led the construction of line-follower, sumo, and trekking robots. Competed in events like RCX and Iron Cup.",
+    positionKey: "experience.position.pucprRobotics",
+    durationKey: "experience.duration.pucprRobotics",
+    descriptionKey: "experience.desc.pucprRobotics",
   },
 ];
 
@@ -107,6 +108,8 @@ const Experience = () => {
     };
   }, []);
 
+  const { t } = useLanguage();
+
   return (
     <Box
       component="section"
@@ -128,7 +131,7 @@ const Experience = () => {
           gutterBottom
           sx={{ color: 'text.primary' }}
         >
-          Experience
+          {t('experience.title')}
         </Typography>
 
         <Box mt={4}>
@@ -174,7 +177,7 @@ const Experience = () => {
                       fontWeight="medium"
                       fontFamily="monospace"
                     >
-                      {exp.position}
+                      {t(exp.positionKey)}
                     </Typography>
                   </Box>
                   <Typography variant="body1" mb={0.5}>
@@ -190,14 +193,14 @@ const Experience = () => {
                     </Link>
                   </Typography>
                   <Typography variant="body2" color="text.secondary" mb={1} fontFamily="monospace">
-                    {exp.duration}
+                    {t(exp.durationKey)}
                   </Typography>
                   <Typography
                     variant="body2"
                     color="text.primary"
                     sx={{ whiteSpace: "pre-line", fontFamily: 'monospace' }}
                   >
-                    {exp.description}
+                    {t(exp.descriptionKey)}
                   </Typography>
                 </CardContent>
               </Card>

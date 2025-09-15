@@ -17,12 +17,15 @@ import {
   Backdrop
 } from "@mui/material"
 import { Menu, Close } from "@mui/icons-material"
+import { useLanguage } from "./LanguageProvider"
+import LanguageSwitcher from "./LanguageSwitcher"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('md'))
+  const { t } = useLanguage()
 
   useEffect(() => {
     setMounted(true)
@@ -54,12 +57,12 @@ const Header = () => {
   }
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Education', href: '#education' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Contact', href: '#contact' },
+    { label: t('nav.home'), href: '#home' },
+    { label: t('nav.education'), href: '#education' },
+    { label: t('nav.experience'), href: '#experience' },
+    { label: t('nav.projects'), href: '#projects' },
+    { label: t('nav.skills'), href: '#skills' },
+    { label: t('nav.contact'), href: '#contact' },
   ]
 
   return (
@@ -121,6 +124,7 @@ const Header = () => {
                   {item.label}
                 </NavLink>
               ))}
+              <LanguageSwitcher />
             </Stack>
           </Paper>
         </AppBar>
@@ -154,6 +158,9 @@ const Header = () => {
                 </ListItemButton>
               </ListItem>
             ))}
+            <ListItem>
+              <LanguageSwitcher />
+            </ListItem>
           </List>
         </Box>
       </Drawer>

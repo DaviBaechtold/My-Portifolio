@@ -13,79 +13,81 @@ import {
 } from "@mui/material"
 import { Launch, GitHub } from "@mui/icons-material"
 import { useScrollAnimation } from "../hooks/useScrollAnimation"
+import { useLanguage } from "./LanguageProvider"
 
 const Projects = () => {
   const [visibleCards, setVisibleCards] = useState<boolean[]>([])
   const cardRefs = useRef<(HTMLElement | null)[]>([])
+  const { t } = useLanguage()
 
   const projects = [
     {
-      title: "Portfolio",
-      description: "A personal portfolio showcasing my projects and skills.",
+      titleKey: "projects.title.portfolio",
+      descriptionKey: "projects.desc.portfolio",
       image: "",
       technologies: ["Next.js", "TypeScript", "Node.js", "Postgres", "HTML", "CSS", "JavaScript", "MUI"],
       githubLink: "https://github.com/DaviBaechtold/My-Portifolio",
       liveLink: ""
     },
     {
-      title: "Computer Vision Project",
-      description: "A real-time computer vision application that processes a webcam feed, applies image filters and statistical analyses, and recognizes hand gestures using MediaPipe. The processed video is output to a virtual camera for use in other applications.",
+      titleKey: "projects.title.computerVision",
+      descriptionKey: "projects.desc.computerVision",
       image: "",
       technologies: ["Python", "MediaPipe", "OpenCV", "Computer Vision", "Virtual Camera"],
       githubLink: "https://github.com/DaviBaechtold/Computer-Vision--HandRecognition",
       liveLink: ""
     },
     {
-      title: "Voice Assistant - Google Dev Board",
-      description: "A Brazilian Portuguese voice assistant for automotive use, developed for the Google Dev Board (AA1).",
+      titleKey: "projects.title.autoVoice",
+      descriptionKey: "projects.desc.autoVoice",
       image: "",
       technologies: ["Python","C++", "Shell","Google Assistant SDK", "Speech Recognition", "Embedded Systems", "Artificial Intelligence", "Speech Synthesis"],
       githubLink: "https://github.com/DaviBaechtold/AutoVoice-Pro--Automotive-Voice-Assistant",
       liveLink: ""
     },
     {
-      title: "Follow line - Robotics Team - PUCPR",
-      description: "Repository with line-follower code (Arduino, C++ and Assembly) and hardware files (PCBs) for autonomous robots. Includes PID control examples, dynamic calibration, PCB designs and documentation for assembly and programming.",
+      titleKey: "projects.title.followLine",
+      descriptionKey: "projects.desc.followLine",
       image: "",
       technologies: ["C++","Python", "Arduino", "Assembly", "PCB Design", "Embedded Systems", "Electronics", "Soldering", "3D Modeling"],
       githubLink: "https://github.com/equipepucpr/Follow-Line",
       liveLink: ""
     },
     {
-      title: "Antweight combat robot - Robotics Team - PUCPR",
-      description: "Antweight (~150g) combat robot project with CAD models (SolidWorks/STEP), electronic components, 3D print files and assembly instructions. Includes details on brushless motors, ESC, receiver, battery and printed parts for construction and testing.",
+      titleKey: "projects.title.antweightRobot",
+      descriptionKey: "projects.desc.antweightRobot",
       image: "",
       technologies: ["Soldering", "Electronics", "PCB Design", "3D Modeling", "3D Printing"],
       githubLink: "https://github.com/equipepucpr/Fairy-Gurren",
       liveLink: ""
     },
     {
-      title: "Access Management ESP32 - Robotics Team",
-      description: "An access control system using an ESP32 and RFID. It authenticates users via RFID cards, manages credentials fetched from a server, logs access events, and provides real-time feedback with LEDs and a buzzer. The system features Wi-Fi connectivity, NTP time synchronization, and uses FreeRTOS for concurrent tasks.",
+      titleKey: "projects.title.accessManagementESP32",
+      descriptionKey: "projects.desc.accessManagementESP32",
       image: "",
       technologies: ["C++", "ESP32", "RFID", "FreeRTOS", "WiFi", "HTTP", "JSON", "SPIFFS"],
       githubLink: "https://github.com/equipepucpr/access-management",
       liveLink: ""
     },
     {
-      title: "Arduino IMU Angle Visualizer",
-      description: "Real-time reading, transmission and visualization of IMU sensor data (accelerometer and gyroscope) from an Arduino, with graphical visualization in Python.",
+      titleKey: "projects.title.imuVisualizer",
+      descriptionKey: "projects.desc.imuVisualizer",
       image: "",
       technologies: ["Python", "Arduino", "Data Visualization"],
       githubLink: "https://github.com/DaviBaechtold/Arduino-IMU-Angle-Visualizer",
       liveLink: ""
     },
     {
-      title: "VEX Project - Industrial Robotics",
-      description: "Development of a robotic arm for industrial applications, focusing on precision and efficiency.",
+      titleKey: "projects.title.vexProject",
+      descriptionKey: "projects.desc.vexProject",
       image: "",
       technologies: ["C#", "Python", "3D Modeling"],
       githubLink: "",
       liveLink: "https://www.vexrobotics.com/competition"
     },
     {
-      title: "Coffee Machine PCB - Freelance",
-      description: "Design and development of a PCB for a coffee machine, focusing on power management and control systems.",
+      titleKey: "projects.title.coffeeMachinePcb",
+      descriptionKey: "projects.desc.coffeeMachinePcb",
       image: "",
       technologies: ["PCB Design", "Electronics", "Soldering"],
       githubLink: "https://github.com/DaviBaechtold/Coffee-Machine-Project",
@@ -160,7 +162,7 @@ const Projects = () => {
                 fontFamily: 'monospace',
               }}
             >
-              Projects
+              {t('projects.title')}
             </Typography>
 
             <Box
@@ -177,7 +179,7 @@ const Projects = () => {
             >
               {projects.map((project, index) => (
                 <Box
-                  key={project.title}
+                  key={project.githubLink || project.liveLink || index}
                   sx={{
                     transform: visibleCards[index] 
                       ? 'translateX(0)' 
@@ -243,10 +245,10 @@ const Projects = () => {
                           fontFamily: 'monospace'
                         }}
                       >
-                        {project.title}
+                        {t(project.titleKey)}
                       </Typography>
 
-                      {project.description && (
+                      {project.descriptionKey && (
                         <Typography
                           variant="body2"
                           sx={{ 
@@ -261,7 +263,7 @@ const Projects = () => {
                             fontFamily: 'monospace'
                           }}
                         >
-                          {project.description}
+                          {t(project.descriptionKey)}
                         </Typography>
                       )}
 
@@ -303,7 +305,7 @@ const Projects = () => {
                           }}
                         >
                           <Launch sx={{ fontSize: 16, mr: 0.5 }} />
-                          Reference
+                          {t('projects.reference')}
                         </Link>
                       )}
 

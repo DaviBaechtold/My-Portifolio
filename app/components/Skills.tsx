@@ -23,6 +23,7 @@ import {
 } from 'react-icons/tb'
 import { useScrollAnimation } from "../hooks/useScrollAnimation"
 import React from 'react'
+import { useLanguage } from "./LanguageProvider"
 
 interface Skill {
   name: string
@@ -70,6 +71,7 @@ const Skills = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [skillsVisible, setSkillsVisible] = useState<boolean[]>([])
   const { ref, isVisible } = useScrollAnimation()
+  const { t } = useLanguage()
 
   // Generate random initial positions for each skill
   const getRandomInitialPosition = (index: number) => {
@@ -235,7 +237,7 @@ const Skills = () => {
                 fontFamily: 'monospace',
               }}
             >
-              Skills
+              {t('skills.title')}
             </Typography>
 
             <Box

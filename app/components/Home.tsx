@@ -19,6 +19,7 @@ import {
   FileDownload
 } from "@mui/icons-material"
 import VantaBackground from "./VantaBackground"
+import { useLanguage } from "./LanguageProvider"
 import { useScrollAnimation } from "../hooks/useScrollAnimation"
 import type React from "react"
 
@@ -28,6 +29,7 @@ const Home: React.FC<HomeProps> = () => {
   const { ref, isVisible } = useScrollAnimation()
   const birthday = new Date("2002-01-20")
   const [age, setAge] = useState("")
+  const { t } = useLanguage()
 
   useEffect(() => {
     const calculateAge = () => {
@@ -165,7 +167,7 @@ const Home: React.FC<HomeProps> = () => {
               <SocialLink
                 href="/docs/resume.pdf"
                 icon={<FileDownload />}
-                label="Download Resume"
+                label={t('home.downloadResume')}
                 download
               />
             </Stack>

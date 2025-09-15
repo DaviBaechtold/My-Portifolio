@@ -13,6 +13,7 @@ import {
 } from "@mui/material"
 import { Email, LocationOn } from "@mui/icons-material"
 import { useScrollAnimation } from "../hooks/useScrollAnimation"
+import { useLanguage } from "./LanguageProvider"
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,6 +21,7 @@ const Contact = () => {
     email: "",
     message: "",
   })
+  const { t } = useLanguage()
   const [toast, setToast] = useState({
     open: false,
     message: "",
@@ -42,7 +44,7 @@ const Contact = () => {
     if (!baseUrl) {
       setToast({
         open: true,
-        message: "Configuration error. Please contact the administrator.",
+        message: t('toast.configError'),
         severity: "error"
       })
       return
@@ -63,13 +65,13 @@ const Contact = () => {
         setFormData({ name: "", email: "", message: "" })
         setToast({
           open: true,
-          message: "Message sent successfully! I'll get back to you soon.",
+          message: t('toast.success'),
           severity: "success"
         })
       } else {
         setToast({
           open: true,
-          message: "Failed to send message. Please try again later.",
+          message: t('toast.fail'),
           severity: "error"
         })
       }
@@ -77,7 +79,7 @@ const Contact = () => {
       console.error("Error submitting form:", error)
       setToast({
         open: true,
-        message: "Network error. Please check your connection and try again.",
+        message: t('toast.network'),
         severity: "error"
       })
     }
@@ -115,7 +117,7 @@ const Contact = () => {
                 fontFamily: 'monospace',
               }}
             >
-              Contact Me
+              {t('contact.title')}
             </Typography>
 
             <Box
@@ -139,7 +141,7 @@ const Contact = () => {
                     fontFamily: 'monospace'
                   }}
                 >
-                  Get in Touch
+                  {t('contact.getInTouch')}
                 </Typography>
                 <Typography
                   variant="body1"
@@ -149,8 +151,7 @@ const Contact = () => {
                     fontFamily: 'monospace'
                   }}
                 >
-                  I'm always open to new opportunities and collaborations. 
-                  Feel free to reach out!
+                  {t('contact.intro')}
                 </Typography>
 
                 <Stack spacing={2}>
@@ -175,7 +176,7 @@ const Contact = () => {
                         fontFamily: 'monospace',
                       }}
                     >
-                      Curitiba, BR
+                      {t('contact.city')}
                     </Typography>
                   </Box>
                 </Stack>
@@ -201,7 +202,7 @@ const Contact = () => {
                   <Stack spacing={3} sx={{ width: '100%' }}>
                     <TextField
                       fullWidth
-                      label="Name"
+                      label={t('contact.name')}
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
@@ -210,7 +211,7 @@ const Contact = () => {
                     />
                     <TextField
                       fullWidth
-                      label="Email"
+                      label={t('contact.email')}
                       name="email"
                       type="email"
                       value={formData.email}
@@ -220,7 +221,7 @@ const Contact = () => {
                     />
                     <TextField
                       fullWidth
-                      label="Message"
+                      label={t('contact.message')}
                       name="message"
                       multiline
                       rows={4}
@@ -236,7 +237,7 @@ const Contact = () => {
                       fullWidth
                       sx={{ py: 1.5, fontFamily: 'monospace' }}
                     >
-                      Send Message
+                      {t('contact.send')}
                     </Button>
                   </Stack>
                 </Box>

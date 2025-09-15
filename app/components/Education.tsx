@@ -5,22 +5,23 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import SchoolIcon from "@mui/icons-material/School";
+import { useLanguage } from "./LanguageProvider";
 
 const educations = [
   {
-    degree: "Computer Engineering",
+    degreeKey: "education.degree.computerEngineering",
     institution: "Pontifical Catholic University of Paraná (PUC-PR), Brazil",
     duration: "2020 - 2026",
     description: "",
   },
   {
-    degree: "Computer Science and AI (Exchange Program)",
+    degreeKey: "education.degree.csaiExchange",
     institution: "Technische Hochschule Ingolstadt, Germany",
     duration: "09/2024 - 07/2025",
     description: "",
   }, 
   {
-    degree: "Schooling",
+    degreeKey: "education.degree.schooling",
     institution: "Colégio Imaculada Conceição, Curitiba - Brazil",
     duration: "2017 - 2019",
     description: "",
@@ -91,6 +92,8 @@ const Education = () => {
     };
   }, []);
 
+  const { t } = useLanguage();
+
   return (
     <Box
       component="section"
@@ -112,7 +115,7 @@ const Education = () => {
           fontFamily="monospace"
           sx={{ color: 'text.primary' }}
         >
-          Education
+          {t('education.title')}
         </Typography>
         <Box mt={4}>
           {educations.map((edu, idx) => (
@@ -158,7 +161,7 @@ const Education = () => {
                       color="text.primary"
                       fontFamily="monospace"
                     >
-                      {edu.degree}
+                      {t(edu.degreeKey)}
                     </Typography>
                   </Box>
                   <Typography
