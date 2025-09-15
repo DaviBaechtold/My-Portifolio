@@ -2,8 +2,7 @@
 
 import { useState } from "react"
 import { useLanguage } from "./LanguageProvider"
-import { IconButton, Menu, MenuItem, Tooltip, ListItemText } from "@mui/material"
-import TranslateIcon from "@mui/icons-material/Translate"
+import { IconButton, Menu, MenuItem, Tooltip, Box } from "@mui/material"
 
 const LanguageSwitcher = () => {
   const { lang, setLang, t } = useLanguage()
@@ -21,10 +20,16 @@ const LanguageSwitcher = () => {
     handleClose()
   }
 
-  const labelFor = (value: "en" | "pt-BR" | "de") => {
-    if (value === "en") return t('lang.en')
-    if (value === "pt-BR") return t('lang.pt-BR')
-    return t('lang.de')
+  const flagFor = (value: "en" | "pt-BR" | "de") => {
+    switch (value) {
+      case "pt-BR":
+        return "🇧🇷"
+      case "de":
+        return "🇩🇪"
+      case "en":
+      default:
+        return "🇺🇸"
+    }
   }
 
   return (
@@ -38,11 +43,17 @@ const LanguageSwitcher = () => {
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
           sx={{
+            px: 0.5,
+            height: 32,
+            borderRadius: 1.5,
             bgcolor: (theme) => theme.palette.mode === 'dark' ? 'hsl(50 50% 1% / 50%)' : 'background.paper',
+            color: 'text.primary',
             '&:hover': { bgcolor: 'action.hover' }
           }}
         >
-          <TranslateIcon fontSize="small" />
+          <Box component="span" sx={{ fontSize: 18, lineHeight: 1 }} aria-hidden>
+            {flagFor(lang)}
+          </Box>
         </IconButton>
       </Tooltip>
 
@@ -54,8 +65,17 @@ const LanguageSwitcher = () => {
         MenuListProps={{ 'aria-labelledby': 'lang-button' }}
       >
         {(["en", "pt-BR", "de"] as const).map((code) => (
-          <MenuItem key={code} selected={lang === code} onClick={() => handleSelect(code)}>
-            <ListItemText primary={labelFor(code)} />
+          <MenuItem
+            key={code}
+            selected={lang === code}
+            onClick={() => handleSelect(code)}
+            aria-label={
+              code === 'en' ? t('lang.en') : code === 'pt-BR' ? t('lang.pt-BR') : t('lang.de')
+            }
+          >
+            <Box component="span" sx={{ fontSize: 20 }} aria-hidden>
+              {flagFor(code)}
+            </Box>
           </MenuItem>
         ))}
       </Menu>
