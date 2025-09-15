@@ -25,7 +25,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Mater
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/DaviBaechtold/My-Portifolio.git
-   cd avilash-portfolio
+   cd My-portfolio
    ```
 
 2. **Install dependencies:**
@@ -137,7 +137,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📞 Contact
 
-- **Email:** avilash.bharti@outlook.com
+- **Email:** davicampos2002@gmail.com
 - **LinkedIn:** [linkedin.com/in/davi-baechtold-campos](https://www.linkedin.com/in/davi-baechtold-campos-393037145/)
 - **GitHub:** [github.com/DaviBaechtold](https://github.com/DaviBaechtold)
 - **Website:** [davicampos.dev](https://davicampos.dev)

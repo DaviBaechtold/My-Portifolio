@@ -20,14 +20,6 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Robotics Team - PUCPR",
-      description: "Technical leadership of the robotics team, developing robots for national and international competitions. Focus on computer vision, embedded systems, and artificial intelligence.",
-      image: "",
-      technologies: ["C#", "ROS", "Python", "Soldering", "Embedded Systems", "Electronics", "Arduino", "PCB Design", "3D Modeling", "SolidWorks"],
-      githubLink: "https://github.com/equipepucpr",
-      liveLink: "https://u.easyeda.com/account/user/team/detail/projects?team=6467cf310dd24f4fa22898d0416397cf&type=allTeam"
-    },
-    {
       title: "Portfolio",
       description: "A personal portfolio showcasing my projects and skills.",
       image: "",
@@ -36,51 +28,67 @@ const Projects = () => {
       liveLink: ""
     },
     {
-      title: "VEX Project - Industrial Robotics",
-      description: "Development of a robotic arm for industrial applications, focusing on precision and efficiency.",
+      title: "Computer Vision Project",
+      description: "A real-time computer vision application that processes a webcam feed, applies image filters and statistical analyses, and recognizes hand gestures using MediaPipe. The processed video is output to a virtual camera for use in other applications.",
       image: "",
-      technologies: ["3D Modeling", "C#", "Python"],
-      githubLink: "",
-      liveLink: "https://www.vexrobotics.com/competition"
+      technologies: ["Python", "MediaPipe", "OpenCV", "Computer Vision", "Virtual Camera"],
+      githubLink: "https://github.com/DaviBaechtold/Computer-Vision--HandRecognition",
+      liveLink: ""
     },
     {
       title: "Voice Assistant - Google Dev Board",
-      description: "A Brazilian Portuguese voice assistant system for automotive use, developed for the Google Dev Board (AA1).",
+      description: "A Brazilian Portuguese voice assistant for automotive use, developed for the Google Dev Board (AA1).",
       image: "",
       technologies: ["Python","C++", "Shell","Google Assistant SDK", "Speech Recognition", "Embedded Systems", "Artificial Intelligence", "Speech Synthesis"],
       githubLink: "https://github.com/DaviBaechtold/AutoVoice-Pro--Automotive-Voice-Assistant",
       liveLink: ""
     },
     {
+      title: "Follow line - Robotics Team - PUCPR",
+      description: "Repository with line-follower code (Arduino, C++ and Assembly) and hardware files (PCBs) for autonomous robots. Includes PID control examples, dynamic calibration, PCB designs and documentation for assembly and programming.",
+      image: "",
+      technologies: ["C++","Python", "Arduino", "Assembly", "PCB Design", "Embedded Systems", "Electronics", "Soldering", "3D Modeling"],
+      githubLink: "https://github.com/equipepucpr/Follow-Line",
+      liveLink: ""
+    },
+    {
+      title: "Antweight combat robot - Robotics Team - PUCPR",
+      description: "Antweight (~150g) combat robot project with CAD models (SolidWorks/STEP), electronic components, 3D print files and assembly instructions. Includes details on brushless motors, ESC, receiver, battery and printed parts for construction and testing.",
+      image: "",
+      technologies: ["Soldering", "Electronics", "PCB Design", "3D Modeling", "3D Printing"],
+      githubLink: "https://github.com/equipepucpr/Fairy-Gurren",
+      liveLink: ""
+    },
+    {
+      title: "Access Management ESP32 - Robotics Team",
+      description: "An access control system using an ESP32 and RFID. It authenticates users via RFID cards, manages credentials fetched from a server, logs access events, and provides real-time feedback with LEDs and a buzzer. The system features Wi-Fi connectivity, NTP time synchronization, and uses FreeRTOS for concurrent tasks.",
+      image: "",
+      technologies: ["C++", "ESP32", "RFID", "FreeRTOS", "WiFi", "HTTP", "JSON", "SPIFFS"],
+      githubLink: "https://github.com/equipepucpr/access-management",
+      liveLink: ""
+    },
+    {
       title: "Arduino IMU Angle Visualizer",
-      description: "This project enables real-time reading, transmission, and visualization of IMU sensor data (accelerometer and gyroscope) from an Arduino, with graphical visualization in Python.",
+      description: "Real-time reading, transmission and visualization of IMU sensor data (accelerometer and gyroscope) from an Arduino, with graphical visualization in Python.",
       image: "",
       technologies: ["Python", "Arduino", "Data Visualization"],
       githubLink: "https://github.com/DaviBaechtold/Arduino-IMU-Angle-Visualizer",
       liveLink: ""
     },
     {
-      title: "Access Management ESP32 - Robotics Team",
-      description: "An access control system using an ESP32 and RFID. It authenticates users via RFID cards, manages credentials fetched from a server, logs access events, and provides real-time feedback with LEDs and a buzzer. The system features WiFi connectivity, NTP time synchronization, and uses FreeRTOS for concurrent tasks.",
+      title: "VEX Project - Industrial Robotics",
+      description: "Development of a robotic arm for industrial applications, focusing on precision and efficiency.",
       image: "",
-      technologies: ["C++", "ESP32", "RFID", "FreeRTOS", "WiFi", "HTTP", "JSON", "SPIFFS"],
-      githubLink: "https://github.com/equipepucpr/access-management",
-      liveLink: ""
+      technologies: ["C#", "Python", "3D Modeling"],
+      githubLink: "",
+      liveLink: "https://www.vexrobotics.com/competition"
     },
     {
       title: "Coffee Machine PCB - Freelance",
       description: "Design and development of a PCB for a coffee machine, focusing on power management and control systems.",
       image: "",
       technologies: ["PCB Design", "Electronics", "Soldering"],
-      githubLink: "https://github.com/equipepucpr/access-management",
-      liveLink: "https://u.easyeda.com/account/user/team/detail/projects?team=ddf10f811b7a4fb2bbd262f51442600a&type=allTeam"
-    },
-    {
-      title: "Access Management ESP32 - Robotics Team",
-      description: "An access control system using an ESP32 and RFID. It authenticates users via RFID cards, manages credentials fetched from a server, logs access events, and provides real-time feedback with LEDs and a buzzer. The system features WiFi connectivity, NTP time synchronization, and uses FreeRTOS for concurrent tasks.",
-      image: "",
-      technologies: ["C++", "ESP32", "RFID", "FreeRTOS", "WiFi", "HTTP", "JSON", "SPIFFS"],
-      githubLink: "https://github.com/equipepucpr/access-management",
+      githubLink: "https://github.com/DaviBaechtold/Coffee-Machine-Project",
       liveLink: ""
     }
   ]

@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import { FaPython, FaJava, FaLinux, FaGithub, FaVuejs, FaRobot } from 'react-icons/fa'
+import { SiC, SiCplusplus, SiMysql, SiAmazon, SiArduino, SiVercel, SiAssemblyscript, SiIota, SiPostman } from 'react-icons/si'
+import { SiFigma } from 'react-icons/si'
 import {
   Box,
   Container,
@@ -27,24 +30,39 @@ interface Skill {
 }
 
 const skillsData: Skill[] = [
-  { name: '.Net', icon: <SiDotnet /> },
-  { name: 'C#', icon: <TbBrandCSharp /> },
-  { name: 'Azure', icon: <VscAzure /> },
-  { name: 'Azure Dev Ops', icon: <VscAzureDevops /> },
-  { name: 'SQL Server', icon: <TbSql /> },
-  { name: 'PostgreSQL', icon: <SiPostgresql /> },
-  { name: 'MongoDB', icon: <SiMongodb /> },
-  { name: 'Redis', icon: <SiRedis /> },
-  { name: 'Kafka', icon: <SiApachekafka /> },
-  { name: 'RabbitMq', icon: <SiRabbitmq /> },
-  { name: 'Docker', icon: <FaDocker /> },
-  { name: 'Git', icon: <FaGitAlt /> },
+  
+    
   { name: 'JavaScript', icon: <FaJs /> },
   { name: 'TypeScript', icon: <SiTypescript /> },
-  { name: 'Angular', icon: <FaAngular /> },
-  { name: 'React', icon: <FaReact /> },
+  { name: 'Python', icon: <FaPython /> },
+  { name: 'Java', icon: <FaJava /> },
+  { name: 'C', icon: <SiC /> },
+  { name: 'C#', icon: <TbBrandCSharp /> },
+  { name: 'C++', icon: <SiCplusplus /> },
+  { name: 'Node.js', icon: <FaNodeJs /> },
   { name: 'Next.js', icon: <SiNextdotjs /> },
+  { name: 'React', icon: <FaReact /> },
+  { name: 'Angular', icon: <FaAngular /> },
+  { name: 'Vue.js', icon: <FaVuejs /> },
   { name: 'HTML5', icon: <FaHtml5 /> },
+  { name: 'Docker', icon: <FaDocker /> },
+  { name: 'Linux', icon: <FaLinux /> },
+  { name: 'Git', icon: <FaGitAlt /> },
+  { name: 'GitHub', icon: <FaGithub /> },
+  { name: 'Postman', icon: <SiPostman /> },
+  { name: 'AWS', icon: <SiAmazon /> },
+  { name: 'Azure', icon: <VscAzure /> },
+  { name: 'Azure Dev Ops', icon: <VscAzureDevops /> },
+  { name: 'Vercel', icon: <SiVercel /> },
+  { name: 'Figma', icon: <SiFigma /> },
+  { name: 'MySQL', icon: <SiMysql /> },
+  { name: 'PostgreSQL', icon: <SiPostgresql /> },
+  { name: 'MongoDB', icon: <SiMongodb /> },
+  
+  { name: 'Arduino', icon: <SiArduino /> },
+  { name: 'Assembly', icon: <SiAssemblyscript /> },
+  { name: 'IoT', icon: <SiIota /> },
+  { name: 'Robotics', icon: <FaRobot /> },
 ]
 
 const Skills = () => {

@@ -12,14 +12,14 @@ const experiences = [
   {
     company: "CELEPAR",
     url: "https://www.celepar.pr.gov.br/",
-    position: "Innovation and Technology Intern",
+    position: "IT Intern",
     duration: "Sep 2025 - Present",
     description: "Provided technical support, including OS (Windows/Linux) installation, hardware setup, and user assistance with applications, printers, and security software.",
   },
   {
     company: "Technische Hochschule Ingolstadt",
     url: "https://www.thi.de/",
-    position: "Associate Staff Engineer",
+    position: "Research Assistant",
     duration: "Sep 2024 - Aug 2025",
     description: "Developed AutoVoice, a voice command system for autonomous vehicles, and the IMU Visualizer, a tool for inertial sensor data visualization.",
   },

@@ -8,17 +8,17 @@ import SchoolIcon from "@mui/icons-material/School";
 
 const educations = [
   {
-    degree: "Computer Science and AI (Exchange Program)",
-    institution: "Technische Hochschule Ingolstadt, Germany",
-    duration: "10/2024 - 07/2025",
-    description: "",
-  },
-  {
     degree: "Computer Engineering",
     institution: "Pontifical Catholic University of Paraná (PUC-PR), Brazil",
     duration: "2020 - 2026",
     description: "",
   },
+  {
+    degree: "Computer Science and AI (Exchange Program)",
+    institution: "Technische Hochschule Ingolstadt, Germany",
+    duration: "09/2024 - 07/2025",
+    description: "",
+  }, 
   {
     degree: "Schooling",
     institution: "Colégio Imaculada Conceição, Curitiba - Brazil",
