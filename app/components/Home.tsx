@@ -164,12 +164,11 @@ const Home: React.FC<HomeProps> = () => {
                 icon={<Instagram />}
                 label="Instagram"
               />
-              <SocialLink
-                href="/docs/resume.pdf"
-                icon={<FileDownload />}
-                label={t('home.downloadResume')}
-                download
-              />
+                <SocialLink
+                  href="/resume/index.html" 
+                  icon={<FileDownload />}
+                  label={t('home.downloadResume')}
+                />
             </Stack>
           </Box>
         </Fade>

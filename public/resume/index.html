@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Davi Baechtold Campos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+        .print-show {
+            display: none;
+        }
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                transform: scale(0.95);
+                transform-origin: top left;
+                width: 105.26%; /* 1 / 0.95 */
+            }
+            .no-print {
+                display: none;
+            }
+            .print-show {
+                display: inline-block;
+            }
+            .print-break-inside-avoid {
+                break-inside: avoid;
+            }
+             main {
+                box-shadow: none !important;
+                margin: 0 !important;
+            }
+        }
+    </style>
+    <!-- Simple canonical link for when this is hosted under /resume -->
+    <link rel="canonical" href="/resume" />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="Currículo de Davi Baechtold Campos" />
+</head>
+<body class="bg-gray-100 flex items-center justify-center p-4 md:p-8">
+    <main class="bg-white rounded-xl shadow-2xl max-w-4xl w-full mx-auto overflow-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-3">
+            <!-- Coluna Esquerda (Azul) -->
+            <aside class="md:col-span-1 bg-slate-800 text-white p-8">
+                <div class="flex flex-col items-center">
+                    <img 
+                        src="/images/davi-home.jpeg" 
+                        alt="Foto de Davi Baechtold Campos" 
+                        class="rounded-full w-40 h-40 object-cover border-4 border-slate-500 mb-6"
+                        onerror="this.onerror=null;this.src='https://placehold.co/160x160/1e293b/94a3b8?text=Davi+C.'"
+                    >
+                    <h1 class="text-3xl font-bold text-center">Davi B. Campos</h1>
+                    <p class="text-slate-300 mt-1 text-center">Estudante de Engenharia da Computação</p>
+                </div>
+                
+                <div class="mt-10">
+                    <h2 class="text-xl font-bold border-b-2 border-slate-500 pb-2 mb-4 uppercase tracking-wider">Contato</h2>
+                    <ul class="space-y-4 text-slate-200">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone w-6 text-slate-400"></i>
+                            <span>+55 41 99821-7662</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope w-6 text-slate-400"></i>
+                            <span class="truncate">davicampos2002@gmail.com</span>
+                        </li>
+                         <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt w-6 text-slate-400"></i>
+                            <span>Curitiba, Brasil</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-linkedin w-6 text-slate-400"></i>
+                            <a href="https://linkedin.com/in/davi-baechtold-campos-393037145" target="_blank" class="hover:text-white transition-colors duration-300">/davi-baechtold-campos</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-github w-6 text-slate-400"></i>
+                            <a href="https://github.com/DaviBaechtold" target="_blank" class="hover:text-white transition-colors duration-300">/DaviBaechtold</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-10">
+                    <h2 class="text-xl font-bold border-b-2 border-slate-500 pb-2 mb-4 uppercase tracking-wider">Habilidades</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-semibold text-slate-300 mb-2">Linguagens & Frameworks</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Python</span>
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">JavaScript</span>
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">TypeScript</span>
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Java</span>
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">C/C++/C#</span>
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Node.js</span>
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Next.js</span>
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">React</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-300 mb-2">Cloud, BD & Ferramentas</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Azure</span>
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">AWS</span>
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Docker</span>
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Linux</span>
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Git/GitHub</span>
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">MySQL</span>
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">PostgreSQL</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-300 mb-2">Hardware & Robótica</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Arduino</span>
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Assembly</span>
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Design de PCB</span>
+                                <span class="bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">Sistemas Embarcados</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <h2 class="text-xl font-bold border-b-2 border-slate-500 pb-2 mb-4 uppercase tracking-wider">Idiomas</h2>
+                    <ul class="space-y-2 text-slate-200">
+                        <li><strong>Português:</strong> Nativo</li>
+                        <li><strong>Inglês:</strong> Fluente (C1)</li>
+                        <li><strong>Espanhol:</strong> Intermediário (B1)</li>
+                        <li><strong>Alemão:</strong> Básico (A2)</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Coluna Direita (Branca) -->
+            <div class="md:col-span-2 p-8">
+                <section>
+                    <h2 class="text-2xl font-bold text-slate-800 border-b-4 border-slate-200 pb-2 mb-4 uppercase tracking-wider">Resumo</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Estudante de Engenharia da Computação com sólida experiência em programação, desenvolvimento de soluções e participação ativa em projetos de robótica. Atualmente estagiário de TI na CELEPAR, busco aplicar e expandir meus conhecimentos técnicos em ambientes desafiadores e inovadores.
+                    </p>
+                </section>
+
+                <section class="mt-8">
+                    <h2 class="text-2xl font-bold text-slate-800 border-b-4 border-slate-200 pb-2 mb-4 uppercase tracking-wider">Experiência</h2>
+                    <div class="space-y-6">
+                        <div class="print-break-inside-avoid">
+                            <h3 class="text-lg font-semibold text-slate-700">Estagiário de TI</h3>
+                            <div class="flex justify-between items-baseline">
+                                <p class="text-md text-slate-600">CELEPAR</p>
+                                <p class="text-sm text-slate-500">Set 2025 - Presente</p>
+                            </div>
+                            <p class="text-slate-600 mt-2 text-sm leading-relaxed">Suporte técnico, incluindo instalação de SO (Windows/Linux), configuração de hardware e assistência a usuários com aplicações e segurança.</p>
+                        </div>
+                         <div class="print-break-inside-avoid">
+                            <h3 class="text-lg font-semibold text-slate-700">Pesquisador Assistente</h3>
+                            <div class="flex justify-between items-baseline">
+                                <p class="text-md text-slate-600">Technische Hochschule Ingolstadt</p>
+                                <p class="text-sm text-slate-500">Set 2024 - Ago 2025</p>
+                            </div>
+                            <p class="text-slate-600 mt-2 text-sm leading-relaxed">Desenvolvimento do AutoVoice, um sistema de comando de voz para veículos autônomos, e do IMU Visualizer, uma ferramenta para visualização de dados de sensores inerciais.</p>
+                        </div>
+                        <div class="print-break-inside-avoid">
+                            <h3 class="text-lg font-semibold text-slate-700">Estagiário de Engenharia de Software</h3>
+                            <div class="flex justify-between items-baseline">
+                                <p class="text-md text-slate-600">BRF S.A.</p>
+                                <p class="text-sm text-slate-500">Fev 2023 - Set 2024</p>
+                            </div>
+                            <p class="text-slate-600 mt-2 text-sm leading-relaxed">Desenvolvi um sistema de análise de imagens usando Azure ML e OpenAI para detecção de anomalias e automatizei processos com Power Automate.</p>
+                        </div>
+                        <div class="print-break-inside-avoid">
+                            <h3 class="text-lg font-semibold text-slate-700">Gestor da Equipe de Robôs Autônomos</h3>
+                            <div class="flex justify-between items-baseline">
+                                <p class="text-md text-slate-600">Equipe de Robótica PUCPR</p>
+                                <p class="text-sm text-slate-500">Fev 2022 - Jul 2023</p>
+                            </div>
+                            <p class="text-slate-600 mt-2 text-sm leading-relaxed">Liderei a construção de robôs (seguidor de linha, sumô, trekking) e competi em eventos como RCX e Iron Cup.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mt-8">
+                    <h2 class="text-2xl font-bold text-slate-800 border-b-4 border-slate-200 pb-2 mb-4 uppercase tracking-wider">Educação</h2>
+                     <div class="space-y-4">
+                        <div class="print-break-inside-avoid">
+                            <h3 class="text-lg font-semibold text-slate-700">Engenharia da Computação</h3>
+                            <div class="flex justify-between items-baseline">
+                               <p class="text-md text-slate-600">Pontifícia Universidade Católica do Paraná (PUCPR)</p>
+                               <p class="text-sm text-slate-500">2020 - 2026</p>
+                            </div>
+                        </div>
+                        <div class="print-break-inside-avoid">
+                           <h3 class="text-lg font-semibold text-slate-700">Ciência da Computação e IA (Intercâmbio)</h3>
+                           <div class="flex justify-between items-baseline">
+                              <p class="text-md text-slate-600">Technische Hochschule Ingolstadt, Alemanha</p>
+                              <p class="text-sm text-slate-500">2024 - 2025</p>
+                           </div>
+                        </div>
+                     </div>
+                </section>
+
+                <section class="mt-8">
+                     <h2 class="text-2xl font-bold text-slate-800 border-b-4 border-slate-200 pb-2 mb-4 uppercase tracking-wider">Projetos</h2>
+                     <div class="space-y-4">
+                        <div class="print-break-inside-avoid">
+                           <h3 class="text-lg font-semibold text-slate-700">Assistente de Voz Automotivo (AutoVoice)</h3>
+                           <p class="text-slate-600 mt-1 text-sm leading-relaxed">Assistente de voz em português para uso automotivo, desenvolvido para a Google Dev Board (AA1), integrando reconhecimento e síntese de fala.</p>
+                        </div>
+                        <div class="print-break-inside-avoid">
+                           <h3 class="text-lg font-semibold text-slate-700">Visão Computacional com MediaPipe</h3>
+                           <p class="text-slate-600 mt-1 text-sm leading-relaxed">Aplicação em tempo real que processa feed de webcam, reconhece gestos manuais e envia o vídeo processado para uma câmera virtual.</p>
+                        </div>
+                     </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+    <button onclick="window.print()" class="no-print fixed bottom-5 right-5 bg-slate-800 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-slate-700 transition-colors duration-300 flex items-center gap-2">
+        <i class="fas fa-print"></i>
+        Salvar como PDF
+    </button>
+</body>
+</html>
