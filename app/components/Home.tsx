@@ -165,9 +165,10 @@ const Home: React.FC<HomeProps> = () => {
                 label="Instagram"
               />
                 <SocialLink
-                  href="/resume/index.html" 
+                  href="/docs/CV - PTBR.pdf" 
                   icon={<FileDownload />}
                   label={t('home.downloadResume')}
+                  download
                 />
             </Stack>
           </Box>
