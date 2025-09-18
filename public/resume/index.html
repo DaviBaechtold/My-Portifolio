@@ -17,12 +17,14 @@
             display: none;
         }
         @media print {
-            body {
-                margin: 0;
-                padding: 0;
-                transform: scale(0.95);
-                transform-origin: top left;
-                width: 105.26%; /* 1 / 0.95 */
+            @page {
+                size: A4;
+                margin: 12mm;
+            }
+            html, body {
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
             }
             .no-print {
                 display: none;
@@ -32,17 +34,20 @@
             }
             .print-break-inside-avoid {
                 break-inside: avoid;
+                page-break-inside: avoid;
             }
              main {
+                max-width: 100% !important;
+                width: 100% !important;
                 box-shadow: none !important;
                 margin: 0 !important;
+                border-radius: 0 !important;
+            }
+            .grid {
+                gap: 1rem !important;
             }
         }
     </style>
-    <!-- Simple canonical link for when this is hosted under /resume -->
-    <link rel="canonical" href="/resume" />
-    <meta name="robots" content="index,follow" />
-    <meta name="description" content="Currículo de Davi Baechtold Campos" />
 </head>
 <body class="bg-gray-100 flex items-center justify-center p-4 md:p-8">
     <main class="bg-white rounded-xl shadow-2xl max-w-4xl w-full mx-auto overflow-hidden">
@@ -51,7 +56,7 @@
             <aside class="md:col-span-1 bg-slate-800 text-white p-8">
                 <div class="flex flex-col items-center">
                     <img 
-                        src="/images/davi-home.jpeg" 
+                        src="https://raw.githubusercontent.com/DaviBaechtold/My-Portifolio/main/public/images/davi-home.jpeg" 
                         alt="Foto de Davi Baechtold Campos" 
                         class="rounded-full w-40 h-40 object-cover border-4 border-slate-500 mb-6"
                         onerror="this.onerror=null;this.src='https://placehold.co/160x160/1e293b/94a3b8?text=Davi+C.'"
@@ -221,9 +226,6 @@
             </div>
         </div>
     </main>
-    <button onclick="window.print()" class="no-print fixed bottom-5 right-5 bg-slate-800 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-slate-700 transition-colors duration-300 flex items-center gap-2">
-        <i class="fas fa-print"></i>
-        Salvar como PDF
-    </button>
 </body>
 </html>
+
