@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,63 +9,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            print-color-adjust: exact;
-            -webkit-print-color-adjust: exact;
-        }
-        .print-show {
-            display: none;
-        }
-        @media print {
-            @page {
-                size: A4;
-                margin: 12mm;
-            }
-            html, body {
-                margin: 0 !important;
-                padding: 0 !important;
-                width: 100% !important;
-            }
-            .no-print {
-                display: none;
-            }
-            .print-show {
-                display: inline-block;
-            }
-            .print-break-inside-avoid {
-                break-inside: avoid;
-                page-break-inside: avoid;
-            }
-             main {
-                max-width: 100% !important;
-                width: 100% !important;
-                box-shadow: none !important;
-                margin: 0 !important;
-                border-radius: 0 !important;
-            }
-            .grid {
-                gap: 1rem !important;
-            }
-        }
     </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center p-4 md:p-8">
-    <main class="bg-white rounded-xl shadow-2xl max-w-4xl w-full mx-auto overflow-hidden">
         <div class="grid grid-cols-1 md:grid-cols-3">
             <!-- Coluna Esquerda (Azul) -->
             <aside class="md:col-span-1 bg-slate-800 text-white p-8">
                 <div class="flex flex-col items-center">
-                    <img 
-                        src="https://raw.githubusercontent.com/DaviBaechtold/My-Portifolio/main/public/images/davi-home.jpeg" 
-                        alt="Foto de Davi Baechtold Campos" 
-                        class="rounded-full w-40 h-40 object-cover border-4 border-slate-500 mb-6"
-                        onerror="this.onerror=null;this.src='https://placehold.co/160x160/1e293b/94a3b8?text=Davi+C.'"
-                    >
+                    <img src="https://raw.githubusercontent.com/DaviBaechtold/My-Portifolio/main/public/images/davi-home.jpeg" alt="Foto de Davi Baechtold Campos" class="rounded-full w-40 h-40 object-cover border-4 border-slate-500 mb-6" onerror="this.onerror=null;this.src='https://placehold.co/160x160/1e293b/94a3b8?text=Davi+C.'">
                     <h1 class="text-3xl font-bold text-center">Davi B. Campos</h1>
                     <p class="text-slate-300 mt-1 text-center">Estudante de Engenharia da Computação</p>
                 </div>
-                
+
                 <div class="mt-10">
                     <h2 class="text-xl font-bold border-b-2 border-slate-500 pb-2 mb-4 uppercase tracking-wider">Contato</h2>
                     <ul class="space-y-4 text-slate-200">
@@ -76,7 +31,7 @@
                             <i class="fas fa-envelope w-6 text-slate-400"></i>
                             <span class="truncate">davicampos2002@gmail.com</span>
                         </li>
-                         <li class="flex items-center">
+                        <li class="flex items-center">
                             <i class="fas fa-map-marker-alt w-6 text-slate-400"></i>
                             <span>Curitiba, Brasil</span>
                         </li>
@@ -162,7 +117,7 @@
                             </div>
                             <p class="text-slate-600 mt-2 text-sm leading-relaxed">Suporte técnico, incluindo instalação de SO (Windows/Linux), configuração de hardware e assistência a usuários com aplicações e segurança.</p>
                         </div>
-                         <div class="print-break-inside-avoid">
+                        <div class="print-break-inside-avoid">
                             <h3 class="text-lg font-semibold text-slate-700">Pesquisador Assistente</h3>
                             <div class="flex justify-between items-baseline">
                                 <p class="text-md text-slate-600">Technische Hochschule Ingolstadt</p>
@@ -191,41 +146,41 @@
 
                 <section class="mt-8">
                     <h2 class="text-2xl font-bold text-slate-800 border-b-4 border-slate-200 pb-2 mb-4 uppercase tracking-wider">Educação</h2>
-                     <div class="space-y-4">
+                    <div class="space-y-4">
                         <div class="print-break-inside-avoid">
                             <h3 class="text-lg font-semibold text-slate-700">Engenharia da Computação</h3>
                             <div class="flex justify-between items-baseline">
-                               <p class="text-md text-slate-600">Pontifícia Universidade Católica do Paraná (PUCPR)</p>
-                               <p class="text-sm text-slate-500">2020 - 2026</p>
+                                <p class="text-md text-slate-600">Pontifícia Universidade Católica do Paraná (PUCPR)</p>
+                                <p class="text-sm text-slate-500">2020 - 2026</p>
                             </div>
                         </div>
                         <div class="print-break-inside-avoid">
-                           <h3 class="text-lg font-semibold text-slate-700">Ciência da Computação e IA (Intercâmbio)</h3>
-                           <div class="flex justify-between items-baseline">
-                              <p class="text-md text-slate-600">Technische Hochschule Ingolstadt, Alemanha</p>
-                              <p class="text-sm text-slate-500">2024 - 2025</p>
-                           </div>
+                            <h3 class="text-lg font-semibold text-slate-700">Ciência da Computação e IA (Intercâmbio)</h3>
+                            <div class="flex justify-between items-baseline">
+                                <p class="text-md text-slate-600">Technische Hochschule Ingolstadt, Alemanha</p>
+                                <p class="text-sm text-slate-500">2024 - 2025</p>
+                            </div>
                         </div>
-                     </div>
+                    </div>
                 </section>
 
                 <section class="mt-8">
-                     <h2 class="text-2xl font-bold text-slate-800 border-b-4 border-slate-200 pb-2 mb-4 uppercase tracking-wider">Projetos</h2>
-                     <div class="space-y-4">
+                    <h2 class="text-2xl font-bold text-slate-800 border-b-4 border-slate-200 pb-2 mb-4 uppercase tracking-wider">Projetos</h2>
+                    <div class="space-y-4">
                         <div class="print-break-inside-avoid">
-                           <h3 class="text-lg font-semibold text-slate-700">Assistente de Voz Automotivo (AutoVoice)</h3>
-                           <p class="text-slate-600 mt-1 text-sm leading-relaxed">Assistente de voz em português para uso automotivo, desenvolvido para a Google Dev Board (AA1), integrando reconhecimento e síntese de fala.</p>
+                            <h3 class="text-lg font-semibold text-slate-700">Assistente de Voz Automotivo (AutoVoice)</h3>
+                            <p class="text-slate-600 mt-1 text-sm leading-relaxed">Assistente de voz em português para uso automotivo, desenvolvido para a Google Dev Board (AA1), integrando reconhecimento e síntese de fala.</p>
                         </div>
                         <div class="print-break-inside-avoid">
-                           <h3 class="text-lg font-semibold text-slate-700">Visão Computacional com MediaPipe</h3>
-                           <p class="text-slate-600 mt-1 text-sm leading-relaxed">Aplicação em tempo real que processa feed de webcam, reconhece gestos manuais e envia o vídeo processado para uma câmera virtual.</p>
+                            <h3 class="text-lg font-semibold text-slate-700">Visão Computacional com MediaPipe</h3>
+                            <p class="text-slate-600 mt-1 text-sm leading-relaxed">Aplicação em tempo real que processa feed de webcam, reconhece gestos manuais e envia o vídeo processado para uma câmera virtual.</p>
                         </div>
-                     </div>
+                    </div>
                 </section>
 
             </div>
         </div>
     </main>
 </body>
-</html>
 
+</html>
