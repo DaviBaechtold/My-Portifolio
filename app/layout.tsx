@@ -161,7 +161,7 @@ export default function RootLayout({
     "@type": "Person",
     "name": "Davi Campos",
     "jobTitle": "Computer Engineer",
-    "description": "Experienced Computer Engineer and .NET Developer specializing in full-stack web development",
+    "description": "Experienced Computer Engineer and Python Developer specializing in full-stack web development",
     "url": "https://davicampos.dev",
     "sameAs": [
       "https://linkedin.com/in/davi-campos",
@@ -203,7 +203,7 @@ export default function RootLayout({
         {/* Favicon and app icons */}
         <link rel="icon" href="/favicon.ico" sizes="48x48" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon48.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon16.png" />
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -221,17 +221,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Davi Campos" />
 
-        {/* WhatsApp specific meta tags */}
-        <meta property="whatsapp:title" content="Davi Campos | Computer Engineer Portfolio" />
-        <meta property="whatsapp:description" content="Check out this amazing portfolio of a Full Stack Computer Engineer!" />
-        <meta property="whatsapp:image" content="https://davicampos.dev/images/davi-share.jpg" />
-
-
-        {/* Discord embed meta tags */}
-        <meta property="discord:title" content="Davi Campos | Computer Engineer" />
-        <meta property="discord:description" content="Full Stack Developer specializing in .NET and React. Available for tech discussions and collaborations." />
-        <meta property="discord:image" content="https://davicampos.dev/images/davi-share.jpg" />
-
+    
         {/* Rich snippets for professional profiles */}
         <link rel="me" href="https://linkedin.com/in/davi-campos" />
         <link rel="me" href="https://github.com/davi-campos" />
