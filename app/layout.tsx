@@ -213,34 +213,30 @@ export default function RootLayout({
 
         {/* Additional social media meta tags */}
         {/* <meta property="fb:app_id" content="your-facebook-app-id" /> */}
-        <meta name="linkedin:owner" content="avilashbharti" />
+        <meta name="linkedin:owner" content="davi-campos" />
         {/* <meta name="pinterest-rich-pin" content="true" /> */}
         <meta name="theme-color" content="#1976d2" />
         <meta name="msapplication-TileColor" content="#1976d2" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Avilash Bharti" />
+        <meta name="apple-mobile-web-app-title" content="Davi Campos" />
 
         {/* WhatsApp specific meta tags */}
-        <meta property="whatsapp:title" content="Avilash Bharti | Software Engineer Portfolio" />
-        <meta property="whatsapp:description" content="Check out this amazing portfolio of a Full Stack Software Engineer!" />
-        <meta property="whatsapp:image" content="https://avilashbharti.in/images/avilash-share.jpg" />
+        <meta property="whatsapp:title" content="Davi Campos | Computer Engineer Portfolio" />
+        <meta property="whatsapp:description" content="Check out this amazing portfolio of a Full Stack Computer Engineer!" />
+        <meta property="whatsapp:image" content="https://davicampos.dev/images/davi-share.jpg" />
 
-        {/* Telegram specific meta tags */}
-        {/* <meta property="telegram:title" content="Avilash Bharti | Software Engineer" />
-        <meta property="telegram:description" content="Portfolio of an experienced .NET and React developer." />
-        <meta property="telegram:image" content="https://avilashbharti.in/images/avilash-share.jpg" /> */}
 
         {/* Discord embed meta tags */}
-        <meta property="discord:title" content="Avilash Bharti | Software Engineer" />
+        <meta property="discord:title" content="Davi Campos | Computer Engineer" />
         <meta property="discord:description" content="Full Stack Developer specializing in .NET and React. Available for tech discussions and collaborations." />
-        <meta property="discord:image" content="https://avilashbharti.in/images/avilash-share.jpg" />
+        <meta property="discord:image" content="https://davicampos.dev/images/davi-share.jpg" />
 
         {/* Rich snippets for professional profiles */}
-        <link rel="me" href="https://linkedin.com/in/avilashbharti" />
-        <link rel="me" href="https://github.com/avilash-b" />
-        <link rel="me" href="https://x.com/AviCorpse" />
-        <link rel="me" href="https://www.instagram.com/avilash_bharti/" />
+        <link rel="me" href="https://linkedin.com/in/davi-campos" />
+        <link rel="me" href="https://github.com/davi-campos" />
+        <link rel="me" href="https://x.com/DaviCampos" />
+        <link rel="me" href="https://www.instagram.com/davi_campos/" />
 
         <script
           type="application/ld+json"

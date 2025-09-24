@@ -56,7 +56,7 @@ export default function Portfolio() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://avilashbharti.in"
+          "item": "https://davicampos.dev"
         }
       ]
     }
