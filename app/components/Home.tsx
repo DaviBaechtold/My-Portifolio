@@ -29,7 +29,12 @@ const Home: React.FC<HomeProps> = () => {
   const { ref, isVisible } = useScrollAnimation()
   const birthday = new Date("2002-01-20")
   const [age, setAge] = useState("")
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
+
+  // Escolhe o PDF correto conforme o idioma
+  let resumeHref = "/docs/CV-PTBR.pdf"
+  if (lang === "en") resumeHref = "/docs/CV-EN.pdf"
+  else if (lang === "de") resumeHref = "/docs/CV-DE.pdf"
 
   useEffect(() => {
     const calculateAge = () => {
@@ -165,7 +170,7 @@ const Home: React.FC<HomeProps> = () => {
                 label="Instagram"
               />
                 <SocialLink
-                  href="/docs/CV-PT.pdf" 
+                  href={resumeHref}
                   icon={<FileDownload />}
                   label={t('home.downloadResume')}
                   download
