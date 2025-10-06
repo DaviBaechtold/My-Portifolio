@@ -51,17 +51,28 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Mater
 
 Create a `.env.local` file in the root directory with the following variables:
 
+This project uses a serverless API route to send emails from the contact form: `POST /api/contact`.
+
+Set the following variables in your deployment platform (e.g., Vercel → Project → Settings → Environment Variables):
+
 ```env
-# API Base URL
-NEXT_PUBLIC_API_BASE_URL
+# SMTP settings (example for Gmail)
+EMAIL_SERVER_HOST=smtp.gmail.com
+EMAIL_SERVER_PORT=465
+EMAIL_SERVER_USER=youraddress@gmail.com
+EMAIL_SERVER_PASSWORD=your_app_password
+
+# From/To envelopes (defaults shown)
+EMAIL_FROM=youraddress@gmail.com    # optional; defaults to EMAIL_SERVER_USER
+EMAIL_TO=davicampos2002@gmail.com   # optional; defaults to this value
 ```
 
-### Required Variables:
-- `NEXT_PUBLIC_API_BASE_URL` - Base URL for the API 
+Notes for Gmail:
+- You must enable 2‑Step Verification on the account and create an "App password" for SMTP. Regular account passwords will not work.
+- Use port 465 with `secure: true` (the API selects this automatically when port is 465). Port 587 also works if you set `EMAIL_SERVER_PORT=587`.
+- `EMAIL_FROM` should generally match `EMAIL_SERVER_USER` to avoid SPF/DMARC issues.
 
-### Environment Variables for Production:
-Set these in your deployment platform:
-- `NEXT_PUBLIC_API_BASE_URL=`
+After changing variables on Vercel, redeploy or click "Redeploy with existing build" and ensure the function logs show a success for `/api/contact`.
 
 ## 📁 Project Structure
 

@@ -39,18 +39,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     
-    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL
-    
-    if (!baseUrl) {
-      setToast({
-        open: true,
-        message: t('toast.configError'),
-        severity: "error"
-      })
-      return
-    }
-
-    const apiUrl = `${baseUrl}/anonymous/addContactMe`
+    const apiUrl = "/api/contact"
 
     try {
       const response = await fetch(apiUrl, {
