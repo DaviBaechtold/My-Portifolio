@@ -11,6 +11,13 @@ import { useLanguage } from "./LanguageProvider";
 
 const experiences = [
   {
+    company: "BeLogic",
+    url: "https://www.belogic.com.br/",
+    positionKey: "experience.position.belogic",
+    durationKey: "experience.duration.belogic",
+    descriptionKey: "experience.desc.belogic",
+  },
+  {
     company: "CELEPAR",
     url: "https://www.celepar.pr.gov.br/",
     positionKey: "experience.position.celepar",
