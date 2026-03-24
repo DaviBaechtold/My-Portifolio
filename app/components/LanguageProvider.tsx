@@ -73,7 +73,7 @@ const dictionaries: Record<Lang, Dict> = {
     "projects.desc.vexProject": "Development of a robotic arm for industrial applications, focusing on precision and efficiency.",
     "projects.desc.coffeeMachinePcb": "Design and development of a PCB for a coffee machine, focusing on power management and control systems.",
     // Experience descriptions
-    "experience.desc.belogic": "Full Stack developer for Total Tennis streaming platform. Built responsive frontend with React 19 + Next.js + TypeScript, backend BFF in Spring Boot, and authentication microservice with Keycloak. Implemented JWT multi-realm auth, Docker containerization, and OpenAPI/Swagger documentation.",
+    "experience.desc.belogic": "Full Stack developer at early-stage startup. Built and maintained responsive frontends with React and Next.js, backend services in Spring Boot, and authentication systems with Keycloak. Worked with PostgreSQL, Docker containerization, JWT/OAuth2, and REST APIs.",
     "experience.desc.celepar": "Provided technical support, including OS (Windows/Linux) installation, hardware setup, and user assistance with applications, printers, and security software.",
     "experience.desc.thi": "Developed AutoVoice, a voice command system for autonomous vehicles, and the IMU Visualizer, a tool for inertial sensor data visualization.",
     "experience.desc.brf": "Developed a product image analysis system using Azure ML and OpenAI for anomaly detection. Automated processes with Power Automate and created dashboards in Power BI.",
@@ -145,7 +145,7 @@ const dictionaries: Record<Lang, Dict> = {
     "projects.desc.vexProject": "Desenvolvimento de um braço robótico para aplicações industriais, com foco em precisão e eficiência.",
     "projects.desc.coffeeMachinePcb": "Projeto e desenvolvimento de uma PCB para máquina de café, com foco em gerenciamento de potência e sistemas de controle.",
     // Experience descriptions
-    "experience.desc.belogic": "Desenvolvedor Full Stack para plataforma de streaming Total Tennis. Construí frontend responsivo com React 19 + Next.js + TypeScript, backend BFF em Spring Boot e microserviço de autenticação com Keycloak. Implementei autenticação JWT multi-realm, containerização com Docker e documentação OpenAPI/Swagger.",
+    "experience.desc.belogic": "Desenvolvedor Full Stack em startup em estágio inicial. Construí e mantive frontends responsivos com React e Next.js, serviços backend em Spring Boot e sistemas de autenticação com Keycloak. Trabalhei com PostgreSQL, containerização com Docker, JWT/OAuth2 e APIs REST.",
     "experience.desc.celepar": "Prestei suporte técnico, incluindo instalação de SO (Windows/Linux), configuração de hardware e assistência a usuários com aplicativos, impressoras e softwares de segurança.",
     "experience.desc.thi": "Desenvolvi o AutoVoice, um sistema de comando por voz para veículos autônomos, e o IMU Visualizer, uma ferramenta para visualização de dados de sensores inerciais.",
     "experience.desc.brf": "Desenvolvi um sistema de análise de imagens de produtos usando Azure ML e OpenAI para detecção de anomalias. Automatizei processos com Power Automate e criei dashboards no Power BI.",
@@ -217,7 +217,7 @@ const dictionaries: Record<Lang, Dict> = {
     "projects.desc.vexProject": "Entwicklung eines Roboterarms für industrielle Anwendungen mit Fokus auf Präzision und Effizienz.",
     "projects.desc.coffeeMachinePcb": "Entwurf und Entwicklung einer Leiterplatte für eine Kaffeemaschine mit Fokus auf Leistungsmanagement und Steuerungssysteme.",
     // Experience descriptions
-    "experience.desc.belogic": "Full Stack-Entwickler für Total Tennis-Streaming-Plattform. Entwickelt responsives Frontend mit React 19 + Next.js + TypeScript, BFF-Backend in Spring Boot und Authentifizierungs-Microservice mit Keycloak. Implementiert JWT-Multi-Realm-Authentifizierung, Docker-Containerisierung und OpenAPI/Swagger-Dokumentation.",
+    "experience.desc.belogic": "Full Stack-Entwickler bei Early-Stage-Startup. Entwickelt und gepflegt responsive Frontends mit React und Next.js, Backend-Services in Spring Boot und Authentifizierungssysteme mit Keycloak. Arbeitete mit PostgreSQL, Docker-Containerisierung, JWT/OAuth2 und REST-APIs.",
     "experience.desc.celepar": "Technischen Support bereitgestellt, einschließlich Installation von Betriebssystemen (Windows/Linux), Hardwareeinrichtung und Benutzerunterstützung bei Anwendungen, Druckern und Sicherheitssoftware.",
     "experience.desc.thi": "Entwicklung von AutoVoice, einem Sprachbefehlssystem für autonome Fahrzeuge, und des IMU Visualizer, einem Tool zur Visualisierung von Inertialsensordaten.",
     "experience.desc.brf": "Entwicklung eines Systems zur Produktbildanalyse mit Azure ML und OpenAI zur Anomalieerkennung. Prozesse mit Power Automate automatisiert und Dashboards in Power BI erstellt.",
