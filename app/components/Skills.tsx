@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { FaPython, FaJava, FaLinux, FaGithub, FaVuejs, FaRobot } from 'react-icons/fa'
-import { SiC, SiCplusplus, SiMysql, SiAmazon, SiArduino, SiVercel, SiAssemblyscript, SiIota, SiPostman } from 'react-icons/si'
-import { SiFigma } from 'react-icons/si'
+import { SiC, SiCplusplus, SiMysql, SiAmazon, SiArduino, SiVercel, SiAssemblyscript, SiIota, SiPostman, SiSpring, SiFlask, SiTailwindcss, SiVite, SiFigma, SiTypescript, SiNextdotjs, SiPostgresql, SiRedis, SiApachekafka, SiRabbitmq, SiMongodb, SiOpencv } from 'react-icons/si'
+import { GiKeyring } from 'react-icons/gi'
+import { MdSecurity } from 'react-icons/md'
+import { BiSolidNetworkChart } from 'react-icons/bi'
 import {
   Box,
   Container,
@@ -13,13 +15,10 @@ import {
   FaReact, FaAngular, FaNodeJs, FaDocker, FaHtml5, FaJs, FaGitAlt
 } from 'react-icons/fa'
 import {
-  SiTypescript, SiNextdotjs, SiPostgresql, SiRedis, SiDotnet, SiApachekafka, SiRabbitmq, SiMongodb
-} from 'react-icons/si'
-import {
-  VscAzure, VscAzureDevops
+  VscAzure
 } from 'react-icons/vsc'
 import {
-  TbBrandCSharp, TbSql
+  TbBrandCSharp
 } from 'react-icons/tb'
 import { useScrollAnimation } from "../hooks/useScrollAnimation"
 import React from 'react'
@@ -31,39 +30,58 @@ interface Skill {
 }
 
 const skillsData: Skill[] = [
-  
-    
-  { name: 'JavaScript', icon: <FaJs /> },
-  { name: 'TypeScript', icon: <SiTypescript /> },
-  { name: 'Python', icon: <FaPython /> },
-  { name: 'Java', icon: <FaJava /> },
-  { name: 'C', icon: <SiC /> },
-  { name: 'C#', icon: <TbBrandCSharp /> },
-  { name: 'C++', icon: <SiCplusplus /> },
-  { name: 'Node.js', icon: <FaNodeJs /> },
-  { name: 'Next.js', icon: <SiNextdotjs /> },
+  // Frontend
   { name: 'React', icon: <FaReact /> },
+  { name: 'Next.js', icon: <SiNextdotjs /> },
+  { name: 'TypeScript', icon: <SiTypescript /> },
+  { name: 'JavaScript', icon: <FaJs /> },
+  { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
+  { name: 'HTML5', icon: <FaHtml5 /> },
+  { name: 'Vite', icon: <SiVite /> },
   { name: 'Angular', icon: <FaAngular /> },
   { name: 'Vue.js', icon: <FaVuejs /> },
-  { name: 'HTML5', icon: <FaHtml5 /> },
+  // Backend
+  { name: 'Java', icon: <FaJava /> },
+  { name: 'Spring Boot', icon: <SiSpring /> },
+  { name: 'Python', icon: <FaPython /> },
+  { name: 'Flask', icon: <SiFlask /> },
+  { name: 'Node.js', icon: <FaNodeJs /> },
+  { name: 'C#', icon: <TbBrandCSharp /> },
+  { name: 'C++', icon: <SiCplusplus /> },
+  { name: 'C', icon: <SiC /> },
+  // Databases & Caching
+  { name: 'PostgreSQL', icon: <SiPostgresql /> },
+  { name: 'MySQL', icon: <SiMysql /> },
+  { name: 'MongoDB', icon: <SiMongodb /> },
+  { name: 'Redis', icon: <SiRedis /> },
+  // Message Brokers & Task Queues
+  { name: 'RabbitMQ', icon: <SiRabbitmq /> },
+  { name: 'Celery', icon: <BiSolidNetworkChart /> },
+  { name: 'Apache Kafka', icon: <SiApachekafka /> },
+  // Security & Auth
+  { name: 'Keycloak', icon: <GiKeyring /> },
+  { name: 'OAuth2', icon: <MdSecurity /> },
+  // DevOps & Tools
   { name: 'Docker', icon: <FaDocker /> },
   { name: 'Linux', icon: <FaLinux /> },
   { name: 'Git', icon: <FaGitAlt /> },
   { name: 'GitHub', icon: <FaGithub /> },
   { name: 'Postman', icon: <SiPostman /> },
+  { name: 'ServiceNow', icon: <SiPostman /> },
+  // Cloud & Deployment
   { name: 'AWS', icon: <SiAmazon /> },
   { name: 'Azure', icon: <VscAzure /> },
-  { name: 'Azure Dev Ops', icon: <VscAzureDevops /> },
   { name: 'Vercel', icon: <SiVercel /> },
-  { name: 'Figma', icon: <SiFigma /> },
-  { name: 'MySQL', icon: <SiMysql /> },
-  { name: 'PostgreSQL', icon: <SiPostgresql /> },
-  { name: 'MongoDB', icon: <SiMongodb /> },
-  
+  // ML & Computer Vision
+  { name: 'OpenCV', icon: <SiOpencv /> },
+  { name: 'WebSocket', icon: <BiSolidNetworkChart /> },
+  // Embedded & IoT
   { name: 'Arduino', icon: <SiArduino /> },
   { name: 'Assembly', icon: <SiAssemblyscript /> },
   { name: 'IoT', icon: <SiIota /> },
   { name: 'Robotics', icon: <FaRobot /> },
+  // Design
+  { name: 'Figma', icon: <SiFigma /> },
 ]
 
 const Skills = () => {
