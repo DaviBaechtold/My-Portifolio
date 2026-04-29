@@ -9,17 +9,15 @@ import {
   Container,
   Typography,
   Paper,
-  Fade
+  Fade,
+  Tabs,
+  Tab,
 } from "@mui/material"
 import {
   FaReact, FaAngular, FaNodeJs, FaDocker, FaHtml5, FaJs, FaGitAlt
 } from 'react-icons/fa'
-import {
-  VscAzure
-} from 'react-icons/vsc'
-import {
-  TbBrandCSharp
-} from 'react-icons/tb'
+import { VscAzure } from 'react-icons/vsc'
+import { TbBrandCSharp } from 'react-icons/tb'
 import { useScrollAnimation } from "../hooks/useScrollAnimation"
 import React from 'react'
 import { useLanguage } from "./LanguageProvider"
@@ -29,204 +27,146 @@ interface Skill {
   icon: React.ReactNode
 }
 
-const skillsData: Skill[] = [
-  // Frontend
-  { name: 'React', icon: <FaReact /> },
-  { name: 'Next.js', icon: <SiNextdotjs /> },
-  { name: 'TypeScript', icon: <SiTypescript /> },
-  { name: 'JavaScript', icon: <FaJs /> },
-  { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
-  { name: 'HTML5', icon: <FaHtml5 /> },
-  { name: 'Vite', icon: <SiVite /> },
-  { name: 'Angular', icon: <FaAngular /> },
-  { name: 'Vue.js', icon: <FaVuejs /> },
-  // Backend
-  { name: 'Java', icon: <FaJava /> },
-  { name: 'Spring Boot', icon: <SiSpring /> },
-  { name: 'Python', icon: <FaPython /> },
-  { name: 'Flask', icon: <SiFlask /> },
-  { name: 'Node.js', icon: <FaNodeJs /> },
-  { name: 'C#', icon: <TbBrandCSharp /> },
-  { name: 'C++', icon: <SiCplusplus /> },
-  { name: 'C', icon: <SiC /> },
-  // Databases & Caching
-  { name: 'PostgreSQL', icon: <SiPostgresql /> },
-  { name: 'MySQL', icon: <SiMysql /> },
-  { name: 'MongoDB', icon: <SiMongodb /> },
-  { name: 'Redis', icon: <SiRedis /> },
-  // Message Brokers & Task Queues
-  { name: 'RabbitMQ', icon: <SiRabbitmq /> },
-  { name: 'Celery', icon: <BiSolidNetworkChart /> },
-  { name: 'Apache Kafka', icon: <SiApachekafka /> },
-  // Security & Auth
-  { name: 'Keycloak', icon: <GiKeyring /> },
-  { name: 'OAuth2', icon: <MdSecurity /> },
-  // DevOps & Tools
-  { name: 'Docker', icon: <FaDocker /> },
-  { name: 'Linux', icon: <FaLinux /> },
-  { name: 'Git', icon: <FaGitAlt /> },
-  { name: 'GitHub', icon: <FaGithub /> },
-  { name: 'Postman', icon: <SiPostman /> },
-  { name: 'ServiceNow', icon: <SiPostman /> },
-  // Cloud & Deployment
-  { name: 'AWS', icon: <SiAmazon /> },
-  { name: 'Azure', icon: <VscAzure /> },
-  { name: 'Vercel', icon: <SiVercel /> },
-  // ML & Computer Vision
-  { name: 'OpenCV', icon: <SiOpencv /> },
-  { name: 'WebSocket', icon: <BiSolidNetworkChart /> },
-  // Embedded & IoT
-  { name: 'Arduino', icon: <SiArduino /> },
-  { name: 'Assembly', icon: <SiAssemblyscript /> },
-  { name: 'IoT', icon: <SiIota /> },
-  { name: 'Robotics', icon: <FaRobot /> },
-  // Design
-  { name: 'Figma', icon: <SiFigma /> },
+interface SkillCategory {
+  labelKey: string
+  skills: Skill[]
+}
+
+const skillCategories: SkillCategory[] = [
+  {
+    labelKey: 'skills.cat.frontend',
+    skills: [
+      { name: 'React', icon: <FaReact /> },
+      { name: 'Next.js', icon: <SiNextdotjs /> },
+      { name: 'TypeScript', icon: <SiTypescript /> },
+      { name: 'JavaScript', icon: <FaJs /> },
+      { name: 'HTML5', icon: <FaHtml5 /> },
+      { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
+      { name: 'Angular', icon: <FaAngular /> },
+      { name: 'Vue.js', icon: <FaVuejs /> },
+      { name: 'Vite', icon: <SiVite /> },
+      { name: 'Figma', icon: <SiFigma /> },
+    ],
+  },
+  {
+    labelKey: 'skills.cat.backend',
+    skills: [
+      { name: 'Java', icon: <FaJava /> },
+      { name: 'Spring Boot', icon: <SiSpring /> },
+      { name: 'Python', icon: <FaPython /> },
+      { name: 'Flask', icon: <SiFlask /> },
+      { name: 'Node.js', icon: <FaNodeJs /> },
+      { name: 'TypeScript', icon: <SiTypescript /> },
+      { name: 'JavaScript', icon: <FaJs /> },
+      { name: 'C#', icon: <TbBrandCSharp /> },
+      { name: 'C++', icon: <SiCplusplus /> },
+      { name: 'C', icon: <SiC /> },
+      { name: 'WebSocket', icon: <BiSolidNetworkChart /> },
+      { name: 'Postman', icon: <SiPostman /> },
+    ],
+  },
+  {
+    labelKey: 'skills.cat.databases',
+    skills: [
+      { name: 'PostgreSQL', icon: <SiPostgresql /> },
+      { name: 'MySQL', icon: <SiMysql /> },
+      { name: 'MongoDB', icon: <SiMongodb /> },
+      { name: 'Redis', icon: <SiRedis /> },
+      { name: 'RabbitMQ', icon: <SiRabbitmq /> },
+      { name: 'Apache Kafka', icon: <SiApachekafka /> },
+      { name: 'Celery', icon: <BiSolidNetworkChart /> },
+      { name: 'Python', icon: <FaPython /> },
+      { name: 'Docker', icon: <FaDocker /> },
+    ],
+  },
+  {
+    labelKey: 'skills.cat.devops',
+    skills: [
+      { name: 'Docker', icon: <FaDocker /> },
+      { name: 'Linux', icon: <FaLinux /> },
+      { name: 'Git', icon: <FaGitAlt /> },
+      { name: 'GitHub', icon: <FaGithub /> },
+      { name: 'AWS', icon: <SiAmazon /> },
+      { name: 'Azure', icon: <VscAzure /> },
+      { name: 'Vercel', icon: <SiVercel /> },
+      { name: 'Postman', icon: <SiPostman /> },
+      { name: 'ServiceNow', icon: <SiPostman /> },
+      { name: 'Python', icon: <FaPython /> },
+    ],
+  },
+  {
+    labelKey: 'skills.cat.security',
+    skills: [
+      { name: 'Keycloak', icon: <GiKeyring /> },
+      { name: 'OAuth2', icon: <MdSecurity /> },
+      { name: 'Java', icon: <FaJava /> },
+      { name: 'Spring Boot', icon: <SiSpring /> },
+      { name: 'Docker', icon: <FaDocker /> },
+    ],
+  },
+  {
+    labelKey: 'skills.cat.ai',
+    skills: [
+      { name: 'Python', icon: <FaPython /> },
+      { name: 'OpenCV', icon: <SiOpencv /> },
+      { name: 'Flask', icon: <SiFlask /> },
+      { name: 'WebSocket', icon: <BiSolidNetworkChart /> },
+      { name: 'Azure', icon: <VscAzure /> },
+      { name: 'C++', icon: <SiCplusplus /> },
+    ],
+  },
+  {
+    labelKey: 'skills.cat.embedded',
+    skills: [
+      { name: 'Arduino', icon: <SiArduino /> },
+      { name: 'Assembly', icon: <SiAssemblyscript /> },
+      { name: 'IoT', icon: <SiIota /> },
+      { name: 'Robotics', icon: <FaRobot /> },
+      { name: 'C++', icon: <SiCplusplus /> },
+      { name: 'C', icon: <SiC /> },
+      { name: 'Python', icon: <FaPython /> },
+      { name: 'Linux', icon: <FaLinux /> },
+    ],
+  },
+  {
+    labelKey: 'skills.cat.design',
+    skills: [
+      { name: 'Figma', icon: <SiFigma /> },
+      { name: 'HTML5', icon: <FaHtml5 /> },
+      { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
+      { name: 'Vite', icon: <SiVite /> },
+    ],
+  },
 ]
 
 const Skills = () => {
+  const [activeTab, setActiveTab] = useState(0)
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null)
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-  const [skillsVisible, setSkillsVisible] = useState<boolean[]>([])
   const { ref, isVisible } = useScrollAnimation()
   const { t } = useLanguage()
 
-  // Generate random initial positions for each skill
+  const currentSkills = skillCategories[activeTab].skills
+
   const getRandomInitialPosition = (index: number) => {
-    // Use index as seed for consistent random positions
     const seed = index * 123456789
     const random1 = (seed % 1000) / 1000
     const random2 = ((seed * 7) % 1000) / 1000
     const random3 = ((seed * 13) % 1000) / 1000
     const random4 = ((seed * 17) % 1000) / 1000
-
-    // More directions: 0=top, 1=top-right, 2=right, 3=bottom-right, 4=bottom, 5=bottom-left, 6=left, 7=top-left
     const direction = Math.floor(random1 * 8)
-
-    const baseDistance = 300 + (random3 * 200) // 300-500px from screen edge
-    const variance = (random2 - 0.5) * 400 // ±200px variance
+    const baseDistance = 300 + random3 * 200
+    const variance = (random2 - 0.5) * 400
 
     switch (direction) {
-      case 0: // From top
-        return {
-          x: variance,
-          y: -baseDistance,
-          rotate: (random4 - 0.5) * 720 // More rotation
-        }
-      case 1: // From top-right diagonal
-        return {
-          x: baseDistance,
-          y: -baseDistance + variance,
-          rotate: (random4 - 0.5) * 720
-        }
-      case 2: // From right
-        return {
-          x: baseDistance,
-          y: variance,
-          rotate: (random4 - 0.5) * 720
-        }
-      case 3: // From bottom-right diagonal
-        return {
-          x: baseDistance,
-          y: baseDistance + variance,
-          rotate: (random4 - 0.5) * 720
-        }
-      case 4: // From bottom
-        return {
-          x: variance,
-          y: baseDistance,
-          rotate: (random4 - 0.5) * 720
-        }
-      case 5: // From bottom-left diagonal
-        return {
-          x: -baseDistance,
-          y: baseDistance + variance,
-          rotate: (random4 - 0.5) * 720
-        }
-      case 6: // From left
-        return {
-          x: -baseDistance,
-          y: variance,
-          rotate: (random4 - 0.5) * 720
-        }
-      case 7: // From top-left diagonal
-        return {
-          x: -baseDistance,
-          y: -baseDistance + variance,
-          rotate: (random4 - 0.5) * 720
-        }
-      default:
-        return { x: 0, y: 0, rotate: 0 }
+      case 0: return { x: variance, y: -baseDistance, rotate: (random4 - 0.5) * 720 }
+      case 1: return { x: baseDistance, y: -baseDistance + variance, rotate: (random4 - 0.5) * 720 }
+      case 2: return { x: baseDistance, y: variance, rotate: (random4 - 0.5) * 720 }
+      case 3: return { x: baseDistance, y: baseDistance + variance, rotate: (random4 - 0.5) * 720 }
+      case 4: return { x: variance, y: baseDistance, rotate: (random4 - 0.5) * 720 }
+      case 5: return { x: -baseDistance, y: baseDistance + variance, rotate: (random4 - 0.5) * 720 }
+      case 6: return { x: -baseDistance, y: variance, rotate: (random4 - 0.5) * 720 }
+      default: return { x: -baseDistance, y: -baseDistance + variance, rotate: (random4 - 0.5) * 720 }
     }
-  }
-
-  // Initialize skills visibility when component becomes visible
-  React.useEffect(() => {
-    if (isVisible) {
-      // Initialize all skills as invisible first
-      if (skillsVisible.length === 0) {
-        setSkillsVisible(new Array(skillsData.length).fill(false))
-      }
-
-      // Animate skills in with staggered timing
-      skillsData.forEach((_, index) => {
-        setTimeout(() => {
-          setSkillsVisible(prev => {
-            const newVisible = [...prev]
-            newVisible[index] = true
-            return newVisible
-          })
-        }, 20 + index * 10) // Start after 200ms, then 80ms delay between each skill
-      })
-    }
-  }, [isVisible])
-
-  // Function to calculate transform based on position relative to hovered item
-  const getTransform = (currentIndex: number, hoveredIdx: number | null) => {
-    if (hoveredIdx === null || currentIndex === hoveredIdx) {
-      return 'scale(1) translate(0, 0)'
-    }
-
-    // Calculate grid position (assuming 6 columns on large screens)
-    const cols = 6
-    const hoveredRow = Math.floor(hoveredIdx / cols)
-    const hoveredCol = hoveredIdx % cols
-    const currentRow = Math.floor(currentIndex / cols)
-    const currentCol = currentIndex % cols
-
-    // Calculate distance and direction
-    const rowDiff = currentRow - hoveredRow
-    const colDiff = currentCol - hoveredCol
-
-    // Scale down non-hovered items
-    let scale = 0.85
-    let translateX = 0
-    let translateY = 0
-
-    // Push items away from hovered item
-    if (Math.abs(rowDiff) <= 1 && Math.abs(colDiff) <= 1) {
-      // Adjacent items - push further away
-      translateX = colDiff * 15
-      translateY = rowDiff * 15
-      scale = 0.8
-    } else {
-      // Distant items - subtle movement
-      translateX = colDiff * 5
-      translateY = rowDiff * 5
-      scale = 0.9
-    }
-
-    return `scale(${scale}) translate(${translateX}px, ${translateY}px)`
-  }
-
-  const handleMouseEnter = (skillName: string, index: number) => {
-    setHoveredSkill(skillName)
-    setHoveredIndex(index)
-  }
-
-  const handleMouseLeave = () => {
-    setHoveredSkill(null)
-    setHoveredIndex(null)
   }
 
   return (
@@ -236,9 +176,7 @@ const Skills = () => {
       sx={{
         py: 10,
         backgroundColor: (theme) =>
-          theme.palette.mode === 'dark'
-            ? 'grey.900'
-            : 'grey.100'
+          theme.palette.mode === 'dark' ? 'grey.900' : 'grey.100',
       }}
     >
       <Container maxWidth="lg">
@@ -258,35 +196,42 @@ const Skills = () => {
               {t('skills.title')}
             </Typography>
 
-            <Box
+            <Tabs
+              value={activeTab}
+              onChange={(_, v) => { setActiveTab(v); setHoveredSkill(null) }}
+              variant="scrollable"
+              scrollButtons="auto"
               sx={{
-                display: 'grid',
-                gridTemplateColumns: {
-                  xs: 'repeat(2, 1fr)',
-                  sm: 'repeat(3, 1fr)',
-                  md: 'repeat(4, 1fr)',
-                  lg: 'repeat(6, 1fr)',
-                },
-                gap: 4,
-                justifyItems: 'center',
-                position: 'relative',
-                padding: '20px', // Extra padding to accommodate movement
+                mb: 4,
+                '& .MuiTab-root': { fontFamily: 'monospace', textTransform: 'none', fontWeight: 500 },
+                '& .MuiTabs-indicator': { height: 3, borderRadius: 2 },
               }}
             >
-              {skillsData.map((skill, index) => {
-                const initialPos = getRandomInitialPosition(index)
-                const isSkillVisible = skillsVisible[index] || false
+              {skillCategories.map((cat, i) => (
+                <Tab key={i} label={t(cat.labelKey)} />
+              ))}
+            </Tabs>
 
+            <Box
+              sx={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: 3,
+                justifyContent: 'center',
+                minHeight: 200,
+              }}
+            >
+              {currentSkills.map((skill, index) => {
+                const initialPos = getRandomInitialPosition(index)
                 return (
                   <Box
-                    key={skill.name}
+                    key={`${activeTab}-${skill.name}`}
                     sx={{
-                      // Entry animation - start from off-screen positions
-                      transform: !isSkillVisible
-                        ? `translate(${initialPos.x}px, ${initialPos.y}px) rotate(${initialPos.rotate}deg) scale(0.3)`
-                        : 'translate(0px, 0px) rotate(0deg) scale(1)',
-                      opacity: isSkillVisible ? 1 : 0,
-                      transition: 'all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                      transform: isVisible
+                        ? 'translate(0px, 0px) rotate(0deg) scale(1)'
+                        : `translate(${initialPos.x}px, ${initialPos.y}px) rotate(${initialPos.rotate}deg) scale(0.3)`,
+                      opacity: isVisible ? 1 : 0,
+                      transition: `all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 40}ms`,
                     }}
                   >
                     <Paper
@@ -300,7 +245,6 @@ const Skills = () => {
                         height: 120,
                         width: 120,
                         cursor: 'pointer',
-                        zIndex: hoveredSkill === skill.name ? 10 : 1,
                         position: 'relative',
                         backgroundColor: hoveredSkill === skill.name
                           ? 'primary.main'
@@ -308,74 +252,47 @@ const Skills = () => {
                         color: hoveredSkill === skill.name
                           ? 'primary.contrastText'
                           : 'text.primary',
+                        transform: hoveredSkill === skill.name
+                          ? 'scale(1.3) translateY(-10px)'
+                          : 'scale(1) translateY(0)',
                         boxShadow: hoveredSkill === skill.name
                           ? '0 20px 40px rgba(0,0,0,0.3)'
                           : undefined,
-
-                        // Hover animation - separate from entry animation
-                        transform: hoveredSkill === skill.name
-                          ? 'scale(1.3) translate(0, -10px)'
-                          : getTransform(index, hoveredIndex),
-
-                        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)', // Normal hover animation
-
-                        '&:hover': {
-                          backgroundColor: hoveredSkill === skill.name
-                            ? 'primary.dark'
-                            : 'action.hover',
-                        },
-
-                        // Add a subtle glow effect for hovered item
+                        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                        zIndex: hoveredSkill === skill.name ? 10 : 1,
                         ...(hoveredSkill === skill.name && {
                           '&::before': {
                             content: '""',
                             position: 'absolute',
-                            top: -2,
-                            left: -2,
-                            right: -2,
-                            bottom: -2,
+                            inset: -2,
                             background: 'linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4)',
                             borderRadius: 'inherit',
                             zIndex: -1,
                             filter: 'blur(6px)',
                             opacity: 0.7,
-                            animation: 'pulse 2s infinite',
                           },
                         }),
                       }}
-                      onMouseEnter={() => handleMouseEnter(skill.name, index)}
-                      onMouseLeave={handleMouseLeave}
+                      onMouseEnter={() => setHoveredSkill(skill.name)}
+                      onMouseLeave={() => setHoveredSkill(null)}
                     >
                       <Box
                         sx={{
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          width: '64px',
-                          height: '64px',
+                          width: 64,
+                          height: 64,
                           mb: 1,
-                          transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                          color: hoveredSkill === skill.name
-                            ? 'inherit'
-                            : 'primary.main',
-                          fontFamily: 'monospace',
-                          filter: hoveredSkill === skill.name
-                            ? 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))'
-                            : 'none',
+                          color: hoveredSkill === skill.name ? 'inherit' : 'primary.main',
                           transform: hoveredSkill === skill.name
                             ? 'rotate(5deg) scale(1.2)'
                             : 'rotate(0deg) scale(1)',
-                          fontSize: '48px',
-                          '& svg': {
-                            width: '48px !important',
-                            height: '48px !important',
-                            fontSize: '48px !important',
-                          },
-                          '& *': {
-                            width: '48px !important',
-                            height: '48px !important',
-                            fontSize: '48px !important',
-                          },
+                          transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                          filter: hoveredSkill === skill.name
+                            ? 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))'
+                            : 'none',
+                          '& svg': { width: '48px !important', height: '48px !important' },
                         }}
                       >
                         {skill.icon}
@@ -384,14 +301,10 @@ const Skills = () => {
                         variant="body2"
                         sx={{
                           textAlign: 'center',
-                          color: 'inherit',
-                          fontWeight: hoveredSkill === skill.name ? 600 : 500,
                           fontFamily: 'monospace',
+                          fontWeight: hoveredSkill === skill.name ? 600 : 500,
                           fontSize: hoveredSkill === skill.name ? '0.9rem' : '0.875rem',
                           transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                          textShadow: hoveredSkill === skill.name
-                            ? '0 2px 4px rgba(0,0,0,0.3)'
-                            : 'none',
                         }}
                       >
                         {skill.name}
@@ -401,20 +314,6 @@ const Skills = () => {
                 )
               })}
             </Box>
-
-            {/* Add keyframes for pulse animation */}
-            <style jsx>{`
-              @keyframes pulse {
-                0%, 100% {
-                  opacity: 0.7;
-                  transform: scale(1);
-                }
-                50% {
-                  opacity: 1;
-                  transform: scale(1.05);
-                }
-              }
-            `}</style>
           </Box>
         </Fade>
       </Container>
@@ -423,4 +322,3 @@ const Skills = () => {
 }
 
 export default Skills
-
