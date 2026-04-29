@@ -92,6 +92,38 @@ const Projects = () => {
       technologies: ["PCB Design", "Electronics", "Soldering"],
       githubLink: "https://github.com/DaviBaechtold/Coffee-Machine-Project",
       liveLink: ""
+    },
+    {
+      titleKey: "projects.title.linkedinAutomation",
+      descriptionKey: "projects.desc.linkedinAutomation",
+      image: "",
+      technologies: ["Python", "Gemini AI", "LinkedIn API", "Telegram API", "Git"],
+      githubLink: "https://github.com/DaviBaechtold/Linkedin-commits-generator",
+      liveLink: ""
+    },
+    {
+      titleKey: "projects.title.spotifyToYtmusic",
+      descriptionKey: "projects.desc.spotifyToYtmusic",
+      image: "",
+      technologies: ["Python", "Spotify API", "YouTube Music API"],
+      githubLink: "https://github.com/DaviBaechtold/spotify_to_ytmusic",
+      liveLink: ""
+    },
+    {
+      titleKey: "projects.title.autoU",
+      descriptionKey: "projects.desc.autoU",
+      image: "",
+      technologies: ["Python", "Flask", "NLP", "Hugging Face", "Zero-shot Classification", "HTML", "CSS", "JavaScript"],
+      githubLink: "https://github.com/DaviBaechtold/AutoU",
+      liveLink: ""
+    },
+    {
+      titleKey: "projects.title.followPucpr",
+      descriptionKey: "projects.desc.followPucpr",
+      image: "",
+      technologies: ["C++", "Arduino", "PCB Design", "Assembly", "Embedded Systems", "PID Control"],
+      githubLink: "https://github.com/DaviBaechtold/Follow",
+      liveLink: ""
     }
   ]
 
