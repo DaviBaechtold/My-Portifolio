@@ -59,6 +59,8 @@ const dictionaries: Record<Lang, Dict> = {
     "projects.title.spotifyToYtmusic": "Spotify to YouTube Music Transfer",
     "projects.title.autoU": "AutoU - Email Classifier",
     "projects.title.followPucpr": "Line Follower & PCBs - PUCPR",
+    "projects.title.raspscreen": "RaspScreen - Smart Printer Dashboard",
+    "projects.title.stikerFoda": "Pinterest to WhatsApp Stickers",
     // Experience positions and durations
     "experience.position.belogic": "Junior Full Stack Developer (PJ)",
     "experience.position.celepar": "IT Intern",
@@ -88,8 +90,10 @@ const dictionaries: Record<Lang, Dict> = {
     "projects.desc.spotifyToYtmusic": "Transfers Spotify playlists to YouTube Music via direct link or CSV files. Supports playlist merging (adds only new tracks), cancellation at any time, and automatic track search on YouTube Music.",
     "projects.desc.autoU": "Web app that classifies emails as Productive or Unproductive using NLP and zero-shot classification via Hugging Face. Suggests auto-replies using rule-based templates and optional language models. Flask backend with HTML/CSS/JS frontend.",
     "projects.desc.followPucpr": "Repository with line-follower firmware (Arduino/C++) and PCB hardware files for the PUCPR robotics team. Includes PID control, dynamic calibration, multiple sensor configurations, AVR Assembly examples, and PCB designs.",
+    "projects.desc.raspscreen": "Full control dashboard for a Creality Ender 3 V2 3D printer via Raspberry Pi 3B. Features a local 4\" TFT SPI display (Python/Pillow, dark mode) and a remote web dashboard (HTML/JS). Powered by Klipper + Moonraker. Remote access via Tailscale.",
+    "projects.desc.stikerFoda": "Mobile app (Android/iOS) that converts Pinterest boards into WhatsApp sticker packs. Handles Pinterest OAuth, image processing (crop, resize to 512x512px, WebP conversion via Sharp), and sticker pack bundling. React Native frontend with Node.js/Express backend.",
     // Experience descriptions
-    "experience.desc.belogic": "Fullstack Engineer with experience building distributed and real-time systems. Expert in TypeScript (React/Next.js) on frontend and polyglot architectures on backend (Java/Spring Boot and Python/Flask). Strong experience with Docker infrastructure, security (OAuth2/Keycloak), video processing and AI model integration.",
+    "experience.desc.belogic": "Fullstack Engineer building distributed and real-time systems across multiple products. Frontend with TypeScript (React/Next.js, React Native/Expo). Backend with polyglot architectures (Java/Spring Boot, Python/FastAPI/Flask, Node.js, Laravel). Strong experience with live video streaming (RTSP/HLS, MediaMTX, ffmpeg), AWS (S3, Rekognition), Docker, security (OAuth2/Keycloak, Firebase, JWT), Prisma ORM, Celery/RabbitMQ, and WebSocket.",
     "experience.desc.celepar": "Technical Support & Infrastructure specialist. Managed user support, system configuration, and hardware maintenance (OS installation, hardware setup). Contributed to documentation standards and Git version control implementation. Supported infrastructure updates across Windows/Linux environments.",
     "experience.desc.thi": "Research Developer specializing in autonomous systems and real-time processing. Developed AutoVoice, a voice command system for autonomous vehicles using speech recognition and synthesis. Created IMU Visualizer for real-time inertial sensor data visualization from Arduino. Contributed to Computer Vision projects including hand gesture recognition with ML models.",
     "experience.desc.brf": "Platform Engineer & Developer for ServiceNow. Managed and maintained enterprise ServiceNow instance supporting critical business processes. Responsibilities included version control, deployment management, user access control, and platform customization using Python and JavaScript. Integrated external APIs via Postman for system interoperability.",
@@ -147,6 +151,8 @@ const dictionaries: Record<Lang, Dict> = {
     "projects.title.spotifyToYtmusic": "Transferência Spotify para YouTube Music",
     "projects.title.autoU": "AutoU - Classificador de E-mails",
     "projects.title.followPucpr": "Seguidor de Linha & PCBs - PUCPR",
+    "projects.title.raspscreen": "RaspScreen - Dashboard para Impressora 3D",
+    "projects.title.stikerFoda": "Pinterest para Figurinhas WhatsApp",
     // Experience positions and durations
     "experience.position.belogic": "Desenvolvedor Full Stack Junior (PJ)",
     "experience.position.celepar": "Estagiário de TI",
@@ -176,8 +182,10 @@ const dictionaries: Record<Lang, Dict> = {
     "projects.desc.spotifyToYtmusic": "Transfere playlists do Spotify para o YouTube Music via link direto ou arquivos CSV. Suporta merge de playlists (adiciona apenas músicas novas), cancelamento a qualquer momento e busca automática das músicas.",
     "projects.desc.autoU": "Aplicação web que classifica e-mails como Produtivos ou Improdutivos usando NLP e classificação zero-shot via Hugging Face. Sugere respostas automáticas com templates e modelos de linguagem. Backend Flask com frontend HTML/CSS/JS.",
     "projects.desc.followPucpr": "Repositório com firmware de seguidor de linha (Arduino/C++) e arquivos de hardware PCB para a equipe de robótica da PUCPR. Inclui controle PID, calibração dinâmica, múltiplas configurações de sensores, exemplos em Assembly AVR e projetos PCB.",
+    "projects.desc.raspscreen": "Dashboard completo para controle de uma impressora 3D Creality Ender 3 V2 via Raspberry Pi 3B. Possui display TFT SPI 4\" local (Python/Pillow, dark mode) e dashboard web remoto (HTML/JS). Backend com Klipper + Moonraker. Acesso remoto via Tailscale.",
+    "projects.desc.stikerFoda": "Aplicativo mobile (Android/iOS) que converte pastas do Pinterest em pacotes de figurinhas para o WhatsApp. Realiza autenticação OAuth com Pinterest, processamento de imagens (crop, resize 512x512px, conversão para WebP via Sharp) e empacotamento respeitando os limites do WhatsApp. Frontend em React Native com backend Node.js/Express.",
     // Experience descriptions
-    "experience.desc.belogic": "Engenheiro Fullstack com experiência na construção de sistemas distribuídos e de tempo real. Especialista em TypeScript (React/Next.js) no frontend e arquiteturas políglotas no backend (Java/Spring Boot e Python/Flask). Forte vivência com infraestrutura Docker, segurança (OAuth2/Keycloak), processamento de vídeo e integração de modelos de IA.",
+    "experience.desc.belogic": "Engenheiro Fullstack desenvolvendo sistemas distribuídos e de tempo real em múltiplos produtos. Frontend com TypeScript (React/Next.js, React Native/Expo). Backend com arquiteturas políglotas (Java/Spring Boot, Python/FastAPI/Flask, Node.js, Laravel). Forte experiência com streaming de vídeo ao vivo (RTSP/HLS, MediaMTX, ffmpeg), AWS (S3, Rekognition), Docker, segurança (OAuth2/Keycloak, Firebase, JWT), Prisma ORM, Celery/RabbitMQ e WebSocket.",
     "experience.desc.celepar": "Especialista em Suporte Técnico & Infraestrutura. Gerenciei suporte a usuários, configuração de sistemas e manutenção de hardware (instalação de SO, setup de hardware). Contribuí para padrões de documentação e implementação de controle de versão Git. Apoiei atualizações de infraestrutura em ambientes Windows/Linux.",
     "experience.desc.thi": "Desenvolvedor de Pesquisa especializado em sistemas autônomos e processamento em tempo real. Desenvolvi AutoVoice, um sistema de comando por voz para veículos autônomos com reconhecimento e síntese de fala. Criei IMU Visualizer para visualização em tempo real de dados de sensores inerciais do Arduino. Contribuí em projetos de Computer Vision incluindo reconhecimento de gestos de mão com modelos de ML.",
     "experience.desc.brf": "Engenheiro de Plataforma & Desenvolvedor ServiceNow. Gerenciei e mantive instância ServiceNow corporativa suportando processos críticos de negócio. Responsabilidades incluíram controle de versão, gerenciamento de deployment, controle de acesso de usuários e customização de plataforma usando Python e JavaScript. Integrei APIs externas via Postman para interoperabilidade do sistema.",
@@ -235,6 +243,8 @@ const dictionaries: Record<Lang, Dict> = {
     "projects.title.spotifyToYtmusic": "Spotify zu YouTube Music Transfer",
     "projects.title.autoU": "AutoU - E-Mail-Klassifikator",
     "projects.title.followPucpr": "Linienfolger & PCBs - PUCPR",
+    "projects.title.raspscreen": "RaspScreen - Smart 3D-Drucker-Dashboard",
+    "projects.title.stikerFoda": "Pinterest zu WhatsApp-Stickern",
     // Experience positions and durations
     "experience.position.belogic": "Junior Full Stack Developer (PJ)",
     "experience.position.celepar": "IT-Praktikant",
@@ -264,8 +274,10 @@ const dictionaries: Record<Lang, Dict> = {
     "projects.desc.spotifyToYtmusic": "Überträgt Spotify-Playlists auf YouTube Music via direktem Link oder CSV-Dateien. Unterstützt Playlist-Zusammenführung (fügt nur neue Tracks hinzu), Abbruch jederzeit und automatische Track-Suche.",
     "projects.desc.autoU": "Webanwendung, die E-Mails mit NLP und Zero-Shot-Klassifikation via Hugging Face als produktiv oder unproduktiv klassifiziert. Schlägt automatische Antworten via Regelvorlagen und optionale Sprachmodelle vor. Flask-Backend mit HTML/CSS/JS-Frontend.",
     "projects.desc.followPucpr": "Repository mit Linienfolger-Firmware (Arduino/C++) und PCB-Hardware-Dateien für das PUCPR Robotik-Team. Enthält PID-Regelung, dynamische Kalibrierung, mehrere Sensorkonfigurationen, AVR-Assembly-Beispiele und PCB-Designs.",
+    "projects.desc.raspscreen": "Vollständiges Steuerungs-Dashboard für einen Creality Ender 3 V2 3D-Drucker über Raspberry Pi 3B. Beinhaltet ein lokales 4\" TFT-SPI-Display (Python/Pillow, Dark Mode) und ein Remote-Web-Dashboard (HTML/JS). Backend mit Klipper + Moonraker. Fernzugriff über Tailscale.",
+    "projects.desc.stikerFoda": "Mobile App (Android/iOS), die Pinterest-Boards in WhatsApp-Sticker-Pakete umwandelt. Führt Pinterest-OAuth, Bildverarbeitung (Zuschnitt, Resize auf 512x512px, WebP-Konvertierung via Sharp) und Sticker-Paket-Erstellung durch. React Native Frontend mit Node.js/Express Backend.",
     // Experience descriptions
-    "experience.desc.belogic": "Fullstack-Ingenieur mit Erfahrung im Bau verteilter und Echtzeit-Systeme. Experte in TypeScript (React/Next.js) im Frontend und polyglotter Architekturen im Backend (Java/Spring Boot und Python/Flask). Starke Erfahrung mit Docker-Infrastruktur, Sicherheit (OAuth2/Keycloak), Videoverarbeitung und KI-Modell-Integration.",
+    "experience.desc.belogic": "Fullstack-Ingenieur, der verteilte und Echtzeit-Systeme in mehreren Produkten entwickelt. Frontend mit TypeScript (React/Next.js, React Native/Expo). Backend mit polyglotter Architektur (Java/Spring Boot, Python/FastAPI/Flask, Node.js, Laravel). Starke Erfahrung mit Live-Video-Streaming (RTSP/HLS, MediaMTX, ffmpeg), AWS (S3, Rekognition), Docker, Sicherheit (OAuth2/Keycloak, Firebase, JWT), Prisma ORM, Celery/RabbitMQ und WebSocket.",
     "experience.desc.celepar": "Technischer Support & Infrastruktur-Spezialist. Verwaltung von Benutzer-Support, Systemkonfiguration und Hardware-Wartung (OS-Installation, Hardware-Setup). Beitrag zu Dokumentationsstandards und Git-Versionskontroll-Implementierung. Unterstützung bei Infrastruktur-Updates in Windows/Linux-Umgebungen.",
     "experience.desc.thi": "Forschungs-Entwickler spezialisiert auf autonome Systeme und Echtzeit-Verarbeitung. Entwickelt AutoVoice, ein Sprachbefehlssystem für autonome Fahrzeuge mit Spracherkennung und -synthese. Erstellte IMU Visualizer zur Echtzeit-Visualisierung von Arduino-Sensordaten. Mitwirkung bei Computer-Vision-Projekten einschließlich Hand-Gesten-Erkennung mit ML-Modellen.",
     "experience.desc.brf": "Plattform-Ingenieur & Entwickler für ServiceNow. Verwaltung und Wartung einer ServiceNow-Unternehmensinstanz zur Unterstützung kritischer Geschäftsprozesse. Verantwortung für Versionskontrolle, Deployment-Management, Benutzerzugriffskontrolle und Plattform-Anpassung mit Python und JavaScript. Integration externer APIs über Postman für Systeminteroperabilität.",

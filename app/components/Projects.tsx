@@ -128,6 +128,22 @@ const Projects = () => {
       technologies: ["C++", "Arduino", "PCB Design", "Assembly", "Embedded Systems", "PID Control"],
       githubLink: "https://github.com/DaviBaechtold/Follow",
       liveLink: ""
+    },
+    {
+      titleKey: "projects.title.raspscreen",
+      descriptionKey: "projects.desc.raspscreen",
+      image: "",
+      technologies: ["Python", "Raspberry Pi", "Klipper", "Moonraker", "HTML", "JavaScript", "Linux", "Tailscale"],
+      githubLink: "https://github.com/DaviBaechtold/raspscreen",
+      liveLink: ""
+    },
+    {
+      titleKey: "projects.title.stikerFoda",
+      descriptionKey: "projects.desc.stikerFoda",
+      image: "",
+      technologies: ["React Native", "TypeScript", "Node.js", "Express", "Pinterest API", "Sharp", "Kotlin", "Android"],
+      githubLink: "https://github.com/DaviBaechtold/Pinterest-to-WhatsApp",
+      liveLink: ""
     }
   ]
 

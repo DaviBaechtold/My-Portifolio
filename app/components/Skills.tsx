@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { FaPython, FaJava, FaLinux, FaGithub, FaVuejs, FaRobot } from 'react-icons/fa'
-import { SiC, SiCplusplus, SiMysql, SiAmazon, SiArduino, SiVercel, SiAssemblyscript, SiIota, SiPostman, SiSpring, SiFlask, SiTailwindcss, SiVite, SiFigma, SiTypescript, SiNextdotjs, SiPostgresql, SiRedis, SiApachekafka, SiRabbitmq, SiMongodb, SiOpencv } from 'react-icons/si'
+import { FaPython, FaJava, FaLinux, FaGithub, FaVuejs, FaRobot, FaVideo } from 'react-icons/fa'
+import { SiC, SiCplusplus, SiMysql, SiAmazon, SiArduino, SiVercel, SiAssemblyscript, SiIota, SiPostman, SiSpring, SiFlask, SiTailwindcss, SiVite, SiFigma, SiTypescript, SiNextdotjs, SiPostgresql, SiRedis, SiApachekafka, SiRabbitmq, SiMongodb, SiOpencv, SiFastapi, SiPrisma, SiLaravel, SiFirebase, SiExpo } from 'react-icons/si'
 import { GiKeyring } from 'react-icons/gi'
 import { MdSecurity } from 'react-icons/md'
 import { BiSolidNetworkChart } from 'react-icons/bi'
+import { TbBrandReactNative } from 'react-icons/tb'
 import {
   Box,
   Container,
@@ -46,6 +47,8 @@ const skillCategories: SkillCategory[] = [
       { name: 'Vue.js', icon: <FaVuejs /> },
       { name: 'Vite', icon: <SiVite /> },
       { name: 'Figma', icon: <SiFigma /> },
+      { name: 'React Native', icon: <TbBrandReactNative /> },
+      { name: 'Expo', icon: <SiExpo /> },
     ],
   },
   {
@@ -62,6 +65,8 @@ const skillCategories: SkillCategory[] = [
       { name: 'C++', icon: <SiCplusplus /> },
       { name: 'C', icon: <SiC /> },
       { name: 'WebSocket', icon: <BiSolidNetworkChart /> },
+      { name: 'FastAPI', icon: <SiFastapi /> },
+      { name: 'Laravel', icon: <SiLaravel /> },
       { name: 'Postman', icon: <SiPostman /> },
     ],
   },
@@ -75,6 +80,7 @@ const skillCategories: SkillCategory[] = [
       { name: 'RabbitMQ', icon: <SiRabbitmq /> },
       { name: 'Apache Kafka', icon: <SiApachekafka /> },
       { name: 'Celery', icon: <BiSolidNetworkChart /> },
+      { name: 'Prisma', icon: <SiPrisma /> },
       { name: 'Python', icon: <FaPython /> },
       { name: 'Docker', icon: <FaDocker /> },
     ],
@@ -91,6 +97,7 @@ const skillCategories: SkillCategory[] = [
       { name: 'Vercel', icon: <SiVercel /> },
       { name: 'Postman', icon: <SiPostman /> },
       { name: 'ServiceNow', icon: <SiPostman /> },
+      { name: 'ffmpeg', icon: <FaVideo /> },
       { name: 'Python', icon: <FaPython /> },
     ],
   },
@@ -99,6 +106,8 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'Keycloak', icon: <GiKeyring /> },
       { name: 'OAuth2', icon: <MdSecurity /> },
+      { name: 'Firebase', icon: <SiFirebase /> },
+      { name: 'JWT', icon: <MdSecurity /> },
       { name: 'Java', icon: <FaJava /> },
       { name: 'Spring Boot', icon: <SiSpring /> },
       { name: 'Docker', icon: <FaDocker /> },
@@ -110,6 +119,8 @@ const skillCategories: SkillCategory[] = [
       { name: 'Python', icon: <FaPython /> },
       { name: 'OpenCV', icon: <SiOpencv /> },
       { name: 'Flask', icon: <SiFlask /> },
+      { name: 'FastAPI', icon: <SiFastapi /> },
+      { name: 'AWS Rekognition', icon: <SiAmazon /> },
       { name: 'WebSocket', icon: <BiSolidNetworkChart /> },
       { name: 'Azure', icon: <VscAzure /> },
       { name: 'C++', icon: <SiCplusplus /> },

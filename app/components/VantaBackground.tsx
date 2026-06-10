@@ -15,17 +15,21 @@ const VantaBackground: React.FC<VantaBackgroundProps> = ({ children }) => {
 
   useEffect(() => {
     if (!vantaEffect) {
-      setVantaEffect(
-        HALO({
-          el: vantaRef.current,
-          THREE: THREE,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-        }),
-      )
+      try {
+        setVantaEffect(
+          HALO({
+            el: vantaRef.current,
+            THREE: THREE,
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.0,
+            minWidth: 200.0,
+          }),
+        )
+      } catch {
+        // WebGL unavailable — fall back to CSS gradient background
+      }
     }
     return () => {
       if (vantaEffect) vantaEffect.destroy()
