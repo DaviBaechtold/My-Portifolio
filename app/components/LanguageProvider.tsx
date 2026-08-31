@@ -62,7 +62,7 @@ const dictionaries: Record<Lang, Dict> = {
     "projects.title.raspscreen": "RaspScreen - Smart Printer Dashboard",
     "projects.title.stikerFoda": "Pinterest to WhatsApp Stickers",
     // Experience positions and durations
-    "experience.position.belogic": "Junior Full Stack Developer (PJ)",
+    "experience.position.belogic": "Full Stack Developer (PJ)",
     "experience.position.celepar": "IT Intern",
     "experience.position.thi": "Research Assistant",
     "experience.position.brf": "Software Engineer Intern",
@@ -93,7 +93,7 @@ const dictionaries: Record<Lang, Dict> = {
     "projects.desc.raspscreen": "Full control dashboard for a Creality Ender 3 V2 3D printer via Raspberry Pi 3B. Features a local 4\" TFT SPI display (Python/Pillow, dark mode) and a remote web dashboard (HTML/JS). Powered by Klipper + Moonraker. Remote access via Tailscale.",
     "projects.desc.stikerFoda": "Mobile app (Android/iOS) that converts Pinterest boards into WhatsApp sticker packs. Handles Pinterest OAuth, image processing (crop, resize to 512x512px, WebP conversion via Sharp), and sticker pack bundling. React Native frontend with Node.js/Express backend.",
     // Experience descriptions
-    "experience.desc.belogic": "Fullstack Engineer building distributed and real-time systems across multiple products. Frontend with TypeScript (React/Next.js, React Native/Expo). Backend with polyglot architectures (Java/Spring Boot, Python/FastAPI/Flask, Node.js, Laravel). Strong experience with live video streaming (RTSP/HLS, MediaMTX, ffmpeg), AWS (S3, Rekognition), Docker, security (OAuth2/Keycloak, Firebase, JWT), Prisma ORM, Celery/RabbitMQ, and WebSocket.",
+    "experience.desc.belogic": "Fullstack Engineer building and maintaining multiple client products in parallel. Frontend with TypeScript (React/Next.js, React Native/Expo). Backend with polyglot architectures (Java/Spring Boot, Python/FastAPI/Flask, Node.js, Laravel/PHP). Strong experience with live video streaming (RTSP/HLS, MediaMTX, ffmpeg), AWS (S3, Rekognition), security (OAuth2/Keycloak, Firebase, JWT), Prisma ORM, Celery/RabbitMQ, and WebSocket. Also own DevOps: CI/CD pipelines (Jenkins, GitHub Actions), multi-environment Docker deployments (dev/staging/prod), and server management. Promoted to Full Stack Developer (Mid-level) in July 2026.",
     "experience.desc.celepar": "Technical Support & Infrastructure specialist. Managed user support, system configuration, and hardware maintenance (OS installation, hardware setup). Contributed to documentation standards and Git version control implementation. Supported infrastructure updates across Windows/Linux environments.",
     "experience.desc.thi": "Research Developer specializing in autonomous systems and real-time processing. Developed AutoVoice, a voice command system for autonomous vehicles using speech recognition and synthesis. Created IMU Visualizer for real-time inertial sensor data visualization from Arduino. Contributed to Computer Vision projects including hand gesture recognition with ML models.",
     "experience.desc.brf": "Platform Engineer & Developer for ServiceNow. Managed and maintained enterprise ServiceNow instance supporting critical business processes. Responsibilities included version control, deployment management, user access control, and platform customization using Python and JavaScript. Integrated external APIs via Postman for system interoperability.",
@@ -154,7 +154,7 @@ const dictionaries: Record<Lang, Dict> = {
     "projects.title.raspscreen": "RaspScreen - Dashboard para Impressora 3D",
     "projects.title.stikerFoda": "Pinterest para Figurinhas WhatsApp",
     // Experience positions and durations
-    "experience.position.belogic": "Desenvolvedor Full Stack Junior (PJ)",
+    "experience.position.belogic": "Desenvolvedor Full Stack (PJ)",
     "experience.position.celepar": "Estagiário de TI",
     "experience.position.thi": "Assistente de Pesquisa",
     "experience.position.brf": "Estagiário de Engenharia de Software",
@@ -185,7 +185,7 @@ const dictionaries: Record<Lang, Dict> = {
     "projects.desc.raspscreen": "Dashboard completo para controle de uma impressora 3D Creality Ender 3 V2 via Raspberry Pi 3B. Possui display TFT SPI 4\" local (Python/Pillow, dark mode) e dashboard web remoto (HTML/JS). Backend com Klipper + Moonraker. Acesso remoto via Tailscale.",
     "projects.desc.stikerFoda": "Aplicativo mobile (Android/iOS) que converte pastas do Pinterest em pacotes de figurinhas para o WhatsApp. Realiza autenticação OAuth com Pinterest, processamento de imagens (crop, resize 512x512px, conversão para WebP via Sharp) e empacotamento respeitando os limites do WhatsApp. Frontend em React Native com backend Node.js/Express.",
     // Experience descriptions
-    "experience.desc.belogic": "Engenheiro Fullstack desenvolvendo sistemas distribuídos e de tempo real em múltiplos produtos. Frontend com TypeScript (React/Next.js, React Native/Expo). Backend com arquiteturas políglotas (Java/Spring Boot, Python/FastAPI/Flask, Node.js, Laravel). Forte experiência com streaming de vídeo ao vivo (RTSP/HLS, MediaMTX, ffmpeg), AWS (S3, Rekognition), Docker, segurança (OAuth2/Keycloak, Firebase, JWT), Prisma ORM, Celery/RabbitMQ e WebSocket.",
+    "experience.desc.belogic": "Engenheiro Fullstack desenvolvendo e mantendo múltiplos produtos de clientes em paralelo. Frontend com TypeScript (React/Next.js, React Native/Expo). Backend com arquiteturas políglotas (Java/Spring Boot, Python/FastAPI/Flask, Node.js, Laravel/PHP). Forte experiência com streaming de vídeo ao vivo (RTSP/HLS, MediaMTX, ffmpeg), AWS (S3, Rekognition), segurança (OAuth2/Keycloak, Firebase, JWT), Prisma ORM, Celery/RabbitMQ e WebSocket. Também responsável por DevOps: pipelines de CI/CD (Jenkins, GitHub Actions), deploys multi-ambiente com Docker (dev/homologação/produção) e gerenciamento de servidor. Promovido a Desenvolvedor Full Stack Pleno em julho de 2026.",
     "experience.desc.celepar": "Especialista em Suporte Técnico & Infraestrutura. Gerenciei suporte a usuários, configuração de sistemas e manutenção de hardware (instalação de SO, setup de hardware). Contribuí para padrões de documentação e implementação de controle de versão Git. Apoiei atualizações de infraestrutura em ambientes Windows/Linux.",
     "experience.desc.thi": "Desenvolvedor de Pesquisa especializado em sistemas autônomos e processamento em tempo real. Desenvolvi AutoVoice, um sistema de comando por voz para veículos autônomos com reconhecimento e síntese de fala. Criei IMU Visualizer para visualização em tempo real de dados de sensores inerciais do Arduino. Contribuí em projetos de Computer Vision incluindo reconhecimento de gestos de mão com modelos de ML.",
     "experience.desc.brf": "Engenheiro de Plataforma & Desenvolvedor ServiceNow. Gerenciei e mantive instância ServiceNow corporativa suportando processos críticos de negócio. Responsabilidades incluíram controle de versão, gerenciamento de deployment, controle de acesso de usuários e customização de plataforma usando Python e JavaScript. Integrei APIs externas via Postman para interoperabilidade do sistema.",
@@ -246,7 +246,7 @@ const dictionaries: Record<Lang, Dict> = {
     "projects.title.raspscreen": "RaspScreen - Smart 3D-Drucker-Dashboard",
     "projects.title.stikerFoda": "Pinterest zu WhatsApp-Stickern",
     // Experience positions and durations
-    "experience.position.belogic": "Junior Full Stack Developer (PJ)",
+    "experience.position.belogic": "Full Stack Developer (PJ)",
     "experience.position.celepar": "IT-Praktikant",
     "experience.position.thi": "Wissenschaftlicher Mitarbeiter",
     "experience.position.brf": "Software Engineering Praktikant",
@@ -277,7 +277,7 @@ const dictionaries: Record<Lang, Dict> = {
     "projects.desc.raspscreen": "Vollständiges Steuerungs-Dashboard für einen Creality Ender 3 V2 3D-Drucker über Raspberry Pi 3B. Beinhaltet ein lokales 4\" TFT-SPI-Display (Python/Pillow, Dark Mode) und ein Remote-Web-Dashboard (HTML/JS). Backend mit Klipper + Moonraker. Fernzugriff über Tailscale.",
     "projects.desc.stikerFoda": "Mobile App (Android/iOS), die Pinterest-Boards in WhatsApp-Sticker-Pakete umwandelt. Führt Pinterest-OAuth, Bildverarbeitung (Zuschnitt, Resize auf 512x512px, WebP-Konvertierung via Sharp) und Sticker-Paket-Erstellung durch. React Native Frontend mit Node.js/Express Backend.",
     // Experience descriptions
-    "experience.desc.belogic": "Fullstack-Ingenieur, der verteilte und Echtzeit-Systeme in mehreren Produkten entwickelt. Frontend mit TypeScript (React/Next.js, React Native/Expo). Backend mit polyglotter Architektur (Java/Spring Boot, Python/FastAPI/Flask, Node.js, Laravel). Starke Erfahrung mit Live-Video-Streaming (RTSP/HLS, MediaMTX, ffmpeg), AWS (S3, Rekognition), Docker, Sicherheit (OAuth2/Keycloak, Firebase, JWT), Prisma ORM, Celery/RabbitMQ und WebSocket.",
+    "experience.desc.belogic": "Fullstack-Ingenieur, der mehrere Kundenprodukte parallel entwickelt und betreut. Frontend mit TypeScript (React/Next.js, React Native/Expo). Backend mit polyglotter Architektur (Java/Spring Boot, Python/FastAPI/Flask, Node.js, Laravel/PHP). Starke Erfahrung mit Live-Video-Streaming (RTSP/HLS, MediaMTX, ffmpeg), AWS (S3, Rekognition), Sicherheit (OAuth2/Keycloak, Firebase, JWT), Prisma ORM, Celery/RabbitMQ und WebSocket. Zusätzlich verantwortlich für DevOps: CI/CD-Pipelines (Jenkins, GitHub Actions), Multi-Umgebungs-Deployments mit Docker (Dev/Staging/Prod) und Serververwaltung. Im Juli 2026 zum Full Stack Developer (Mid-Level) befördert.",
     "experience.desc.celepar": "Technischer Support & Infrastruktur-Spezialist. Verwaltung von Benutzer-Support, Systemkonfiguration und Hardware-Wartung (OS-Installation, Hardware-Setup). Beitrag zu Dokumentationsstandards und Git-Versionskontroll-Implementierung. Unterstützung bei Infrastruktur-Updates in Windows/Linux-Umgebungen.",
     "experience.desc.thi": "Forschungs-Entwickler spezialisiert auf autonome Systeme und Echtzeit-Verarbeitung. Entwickelt AutoVoice, ein Sprachbefehlssystem für autonome Fahrzeuge mit Spracherkennung und -synthese. Erstellte IMU Visualizer zur Echtzeit-Visualisierung von Arduino-Sensordaten. Mitwirkung bei Computer-Vision-Projekten einschließlich Hand-Gesten-Erkennung mit ML-Modellen.",
     "experience.desc.brf": "Plattform-Ingenieur & Entwickler für ServiceNow. Verwaltung und Wartung einer ServiceNow-Unternehmensinstanz zur Unterstützung kritischer Geschäftsprozesse. Verantwortung für Versionskontrolle, Deployment-Management, Benutzerzugriffskontrolle und Plattform-Anpassung mit Python und JavaScript. Integration externer APIs über Postman für Systeminteroperabilität.",
